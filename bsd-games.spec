@@ -7,13 +7,13 @@ Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.15
-Release:	2.2
+Release:	3
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
 # Source0-md5:	3814794cb54c56ba3e82d07e93e41f00
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
-# Source1-md5:	53f612734e8324dfc7d3658c33dee4cb
+# Source1-md5:	5ed0ae6b7c5d5a2edddc636240314e34
 Patch0:		%{name}-hole.patch
 Patch1:		%{name}-headers.patch
 Patch2:		%{name}-ospeed.patch
@@ -98,7 +98,7 @@ oyunlar içeren bir paket.
 	LDFLAGS="%{rpmldflags}" \
 	OPTIMIZE="%{rpmcflags}"
 
-mkdir doc/trek
+mkdir -p doc/trek
 nroff trek/DOC/read_me.nr > doc/trek/read_me.txt
 nroff trek/DOC/trekmanual.nr > doc/trek/trekmanual.txt
 
