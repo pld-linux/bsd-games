@@ -10,8 +10,6 @@ Version:	2.12
 Release:	2
 License:	distributable
 Group:		Applications/Games
-Group(de):	Applikationen/Spiele
-Group(pl):	Aplikacje/Gry
 Source0:	ftp://metalab.unc.edu/pub/Linux/games/%{name}-%{version}.tar.gz
 Patch0:		%{name}-hole.patch
 Patch1:		%{name}-headers.patch
