@@ -21,18 +21,18 @@ Requires:	/usr/bin/frm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Bsd-games includes adventure, arithmetic, atc, backgammon, battlestar, bcd,
-caesar, canfield, cfscores, countmail, cribbage, dm, factor, fish, gomoku,
-hunt, mille, monop, morse, number, phantasia, pig, pom, ppt, primes, quiz,
-rain, random, robots, rot13, sail, snake, snscore, teachgammon, tetris-bsd,
-trek, wargames, worm, worms and wump.
+Bsd-games includes adventure, arithmetic, atc, backgammon, battlestar,
+bcd, caesar, canfield, cfscores, countmail, cribbage, dm, factor,
+fish, gomoku, hunt, mille, monop, morse, number, phantasia, pig, pom,
+ppt, primes, quiz, rain, random, robots, rot13, sail, snake, snscore,
+teachgammon, tetris-bsd, trek, wargames, worm, worms and wump.
 
 %description -l pl
 W sk³ad gier BSD wchodz±: adventure, arithmetic, atc, backgammon,
 battlestar, bcd, caesar, canfield, cfscores, countmail, cribbage, dm,
-factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia, pig,
-pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake, snscore,
-teachgammon, tetris-bsd, trek, wargames, worm, worms i wump
+factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia,
+pig, pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake,
+snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms i wump
 
 %prep
 %setup -q
@@ -55,9 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) /usr/games/*
-/usr/share/games/*
-/usr/share/misc/acronyms
+%attr(755,root,root) %{_prefix}/games/*
+%{_datadir}/games/*
+%{_datadir}/misc/acronyms
 /var/games/atc_score
 /var/games/battlestar.log
 /var/games/cfscores
