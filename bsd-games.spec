@@ -2,7 +2,7 @@ Summary:	A collection of BSD (Berkeley Standard Distribution) games
 Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Name:		bsd-games
 Version:	2.11
-Release:	1
+Release:	2
 Copyright:	distributable
 Group:		Games
 Group(pl):	Gry
