@@ -16,7 +16,7 @@ BuildRequires:	ncurses-devel >= 5.0
 Requires:	ncurses >= 5.0
 Requires:	textutils 
 Requires:	/usr/bin/frm
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Bsd-games includes adventure, arithmetic, atc, backgammon, battlestar, bcd,
