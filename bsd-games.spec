@@ -69,7 +69,7 @@ oyunlar içeren bir paket.
 
 %build
 %{__make} LDFLAGS="%{?debug:-s}" \
-	OPTIMIZE="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
+	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
