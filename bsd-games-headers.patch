@@ -1,0 +1,78 @@
+--- bsd-games-2.8/battlestar/com1.c.tim	Mon Nov  1 13:40:44 1999
++++ bsd-games-2.8/battlestar/com1.c	Mon Nov  1 13:41:12 1999
+@@ -33,6 +33,7 @@
+  * SUCH DAMAGE.
+  */
+ 
++#include <stdio.h>
+ #include <sys/cdefs.h>
+ #ifndef lint
+ #if 0
+--- bsd-games-2.8/battlestar/cypher.c.tim	Mon Nov  1 13:41:25 1999
++++ bsd-games-2.8/battlestar/cypher.c	Mon Nov  1 13:41:49 1999
+@@ -33,6 +33,7 @@
+  * SUCH DAMAGE.
+  */
+ 
++#include <stdio.h>
+ #include <sys/cdefs.h>
+ #ifndef lint
+ #if 0
+--- bsd-games-2.8/battlestar/getcom.c.tim	Mon Nov  1 13:42:02 1999
++++ bsd-games-2.8/battlestar/getcom.c	Mon Nov  1 13:42:19 1999
+@@ -32,7 +32,7 @@
+  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  * SUCH DAMAGE.
+  */
+-
++#include <stdio.h>
+ #include <sys/cdefs.h>
+ #ifndef lint
+ #if 0
+--- bsd-games-2.8/battlestar/fly.c.tim	Mon Nov  1 13:42:33 1999
++++ bsd-games-2.8/battlestar/fly.c	Mon Nov  1 13:42:51 1999
+@@ -32,7 +32,7 @@
+  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  * SUCH DAMAGE.
+  */
+-
++#include <stdio.h>
+ #include <sys/cdefs.h>
+ #ifndef lint
+ #if 0
+--- bsd-games-2.8/dm/dm.c.tim	Mon Nov  1 13:43:28 1999
++++ bsd-games-2.8/dm/dm.c	Mon Nov  1 13:44:04 1999
+@@ -32,7 +32,8 @@
+  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  * SUCH DAMAGE.
+  */
+-
++#include <stdio.h>
++#include <unistd.h>
+ #include <sys/cdefs.h>
+ #ifndef lint
+ __COPYRIGHT("@(#) Copyright (c) 1987, 1993\n\
+--- bsd-games-2.8/snake/snake/snake.c.tim	Mon Nov  1 13:44:28 1999
++++ bsd-games-2.8/snake/snake/snake.c	Mon Nov  1 13:44:54 1999
+@@ -32,7 +32,7 @@
+  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  * SUCH DAMAGE.
+  */
+-
++#include <stdio.h>
+ #include <sys/cdefs.h>
+ #ifndef lint
+ __COPYRIGHT("@(#) Copyright (c) 1980, 1993\n\
+--- bsd-games-2.8/tetris/scores.c.tim	Mon Nov  1 13:45:16 1999
++++ bsd-games-2.8/tetris/scores.c	Mon Nov  1 13:45:51 1999
+@@ -47,9 +47,9 @@
+  */
+ #include <err.h>
+ #include <errno.h>
++#include <stdio.h>
+ #include <fcntl.h>
+ #include <pwd.h>
+-#include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/file.h>

@@ -1,0 +1,10 @@
+--- bsd-games-2.8/cribbage/instr.c.hole	Mon Nov  1 13:32:57 1999
++++ bsd-games-2.8/cribbage/instr.c	Mon Nov  1 13:32:31 1999
+@@ -75,6 +75,7 @@
+ 		 * for mailx and man.  We only use a pager if stdout is
+ 		 * a terminal, and we pass the file on stdin to sh -c pager.
+ 		 */
++		setegid(getgid());      /* AC */
+ 		if (!isatty(1))
+ 			path = "cat";
+ 		else {
