@@ -6,17 +6,18 @@ Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
-Version:	2.12
-Release:	4
+Version:	2.13
+Release:	1
 License:	distributable
 Group:		Applications/Games
-Source0:	ftp://metalab.unc.edu/pub/Linux/games/%{name}-%{version}.tar.gz
+Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-hole.patch
 Patch1:		%{name}-headers.patch
 Patch2:		%{name}-ospeed.patch
 Patch3:		%{name}-config.patch
 Patch4:		%{name}-from.patch
+Patch5:		%{name}-destdir.patch
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
 Requires:	textutils
@@ -70,6 +71,7 @@ oyunlar içeren bir paket.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 
 %build
 %{__make} LDFLAGS="%{rpmldflags}" \
@@ -83,7 +85,17 @@ chmod +x install-man install-score
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
-rm -f $RPM_BUILD_ROOT{%{_bindir}/factor,%{_mandir}/{,fi/}man6/factor.6*}
+# primes(6) man oryginally is just a symlink to factor(6)
+# but we install only primes, not factor (which is in sh-utils)
+rm -f $RPM_BUILD_ROOT%{_mandir}/man6/primes.6*
+install factor/factor.6 $RPM_BUILD_ROOT%{_mandir}/man6/primes.6
+
+# TODO: add Finish factor.6 to non-english-man-pages
+#mv -f $RPM_BUILD_ROOT%{_mandir}/fi/man6/{factor,primes}.6
+
+# resolve conflict with hunt package
+mv -f $RPM_BUILD_ROOT%{_bindir}/hunt{,-game}
+mv -f $RPM_BUILD_ROOT%{_mandir}/man6/hunt{,-game}.6
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -98,7 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 /var/games/cfscores
 /var/games/criblog
 /var/games/robots_roll
-%attr(640,root,root) /var/games/phantasia/characs
+%attr(640,root,games) /var/games/phantasia/characs
 /var/games/phantasia/gold
 /var/games/phantasia/lastdead
 /var/games/phantasia/mess
@@ -106,7 +118,7 @@ rm -rf $RPM_BUILD_ROOT
 /var/games/phantasia/motd
 /var/games/phantasia/scoreboard
 /var/games/phantasia/void
-%attr(750,root,root) /var/games/sail
+%attr(750,root,games) /var/games/sail
 /var/games/saillog
 /var/games/snake.log
 /var/games/snakerawscores
