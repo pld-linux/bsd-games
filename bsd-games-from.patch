@@ -1,0 +1,36 @@
+--- bsd-games-2.8/countmail/countmail.foo	Mon Nov  1 13:33:35 1999
++++ bsd-games-2.8/countmail/countmail	Mon Nov  1 13:35:52 1999
+@@ -42,15 +42,15 @@
+ # Caveats:
+ #
+ # The read loop is horrendously slow on every implementation I've
+-# tried.  I suggest using from(1) and wc(1) instead, though these are
++# tried.  I suggest using frm(1) and wc(1) instead, though these are
+ # not shell builtins.
+ 
+ # for krb.
+-#set -- `from -t`
++#set -- `frm -t`
+ #v=$3
+-set -- `from | wc -l`
++set -- `frm | wc -l`
+ v=$1
+-#v=`from | wc -l`
++#v=`frm | wc -l`
+ 
+ #v=0
+ #exec 0</var/mail/$USER
+--- bsd-games-2.12/countmail/countmail.6.foo	Mon Nov  1 13:36:16 1999
++++ bsd-games-2.12/countmail/countmail.6	Wed Sep 27 15:54:54 2000
+@@ -50,9 +50,9 @@
+ The read loop is horrendously slow on every shell implementation tried.
+ .Nm
+ uses
+-.Xr from 1
++.Xr frm 1
+ and
+ .Xr wc 1
+ instead, though these are not shell builtins.
+ .Sh SEE ALSO
+-.Xr from 1
++.Xr frm 1
