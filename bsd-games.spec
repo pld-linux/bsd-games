@@ -46,8 +46,14 @@ Dies ist eine Sammlung von Games. Zu den bekanntesten gehören
 Backgammon, Cribbage, Monop, Primes, Trek und Battlestar.
 
 %description -l es
-Esto es un conjunto de juegos. Los destaques incluyen gammon, barajas,
-ahorcado, monopolio y guerra en las estrellas.
+Bsd-games incluye juegos: adventure, arithmetic, atc, backgammon,
+battlestar, bcd, caesar, canfield, cfscores, countmail, cribbage, dm,
+factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia,
+pig, pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake,
+snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms and wump.
+
+Aviso: countmail requiere comando frm(1) del paquete elm.
+
 
 %description -l fr
 Lot de jeux. Contient backgammon, cribbage, le pendu, monop, primes,
