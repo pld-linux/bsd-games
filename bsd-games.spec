@@ -6,12 +6,12 @@ Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
-Version:	2.13
-Release:	2
+Version:	2.14
+Release:	1
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
-# Source0-md5:	cf33f61ce1f0c09a7473ac26a4a0a6ec
+# Source0-md5:	29042cbe4a71038f84125d020ba28546
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	53f612734e8324dfc7d3658c33dee4cb
 Patch0:		%{name}-hole.patch
@@ -19,10 +19,9 @@ Patch1:		%{name}-headers.patch
 Patch2:		%{name}-ospeed.patch
 Patch3:		%{name}-config.patch
 Patch4:		%{name}-from.patch
-Patch5:		%{name}-destdir.patch
+BuildRequires:	bison
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
-BuildRequires:	bison
 Requires:	textutils
 Requires:	words
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -74,21 +73,32 @@ oyunlar içeren bir paket.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
-%patch5 -p1
+
+# config patch creation: diff between unconfigured and following configuration:
+# Install prefix: $INSTALL_PREFIX
+# Games not to build: banner factor fortune hack
+# Games directory: /usr/bin
+# Daemon directory: /usr/sbin
+# Set owners/groups on installed files [y]: n
+# Gzip manpages [y]: n
+# Ncurses includes []: -I/usr/include/ncurses
+# (the rest is default)
 
 %build
-%{__make} LDFLAGS="%{rpmldflags}" \
+%{__make} \
+	LDFLAGS="%{rpmldflags}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 chmod +x install-man install-score
 
-%{__make} INSTALL_PREFIX="$RPM_BUILD_ROOT" install
+%{__make} install \
+	INSTALL_PREFIX=$RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
-# primes(6) man oryginally is just a symlink to factor(6)
+# primes(6) man originally is just a symlink to factor(6)
 # but we install only primes, not factor (which is in sh-utils)
 rm -f $RPM_BUILD_ROOT%{_mandir}/man6/primes.6*
 install factor/factor.6 $RPM_BUILD_ROOT%{_mandir}/man6/primes.6

@@ -1,5 +1,5 @@
---- bsd-games-2.8/battlestar/com1.c.tim	Mon Nov  1 13:40:44 1999
-+++ bsd-games-2.8/battlestar/com1.c	Mon Nov  1 13:41:12 1999
+--- bsd-games-2.14/battlestar/command1.c.tim	Mon Nov  1 13:40:44 1999
++++ bsd-games-2.14/battlestar/command1.c	Mon Nov  1 13:41:12 1999
 @@ -33,6 +33,7 @@
   * SUCH DAMAGE.
   */

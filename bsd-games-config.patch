@@ -1,6 +1,367 @@
-diff -Nur bsd-games-2.13.orig/GNUmakefile bsd-games-2.13/GNUmakefile
---- bsd-games-2.13.orig/GNUmakefile	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/GNUmakefile	Sun Jul 28 12:31:14 2002
+diff -Nur bsd-games-2.14.orig/atc/pathnames.h bsd-games-2.14/atc/pathnames.h
+--- bsd-games-2.14.orig/atc/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/atc/pathnames.h	2003-07-01 20:18:46.000000000 +0200
+@@ -0,0 +1,42 @@
++/* Automatically generated from atc/pathnames.h.in.  Do not edit.  */
++/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:04:28 cgd Exp $	*/
++
++/*-
++ * Copyright (c) 1990, 1993
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. All advertising materials mentioning features or use of this software
++ *    must display the following acknowledgement:
++ *	This product includes software developed by the University of
++ *	California, Berkeley and its contributors.
++ * 4. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
++ */
++
++#include <paths.h>
++
++#define	_PATH_GAMES	"/usr/share/games/atc/"
++#define	_PATH_SCORE	"/var/games/atc_score"
+diff -Nur bsd-games-2.14.orig/battlestar/pathnames.h bsd-games-2.14/battlestar/pathnames.h
+--- bsd-games-2.14.orig/battlestar/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/battlestar/pathnames.h	2003-07-01 20:18:46.000000000 +0200
+@@ -0,0 +1,39 @@
++/* Automatically generated from battlestar/pathnames.h.in.  Do not edit.  */
++/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:07:51 cgd Exp $	*/
++
++/*-
++ * Copyright (c) 1990, 1993
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. All advertising materials mentioning features or use of this software
++ *    must display the following acknowledgement:
++ *	This product includes software developed by the University of
++ *	California, Berkeley and its contributors.
++ * 4. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
++ */
++
++#define	_PATH_SCORE	"/var/games/battlestar.log"
+diff -Nur bsd-games-2.14.orig/boggle/boggle/bog.h bsd-games-2.14/boggle/boggle/bog.h
+--- bsd-games-2.14.orig/boggle/boggle/bog.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/boggle/boggle/bog.h	2003-07-01 20:18:46.000000000 +0200
+@@ -0,0 +1,88 @@
++/* Automatically generated from boggle/boggle/bog.h.in.  Do not edit.  */
++/*	$NetBSD: bog.h,v 1.2 1995/03/21 12:14:32 cgd Exp $	*/
++
++/*-
++ * Copyright (c) 1993
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * This code is derived from software contributed to Berkeley by
++ * Barry Brachman.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. All advertising materials mentioning features or use of this software
++ *    must display the following acknowledgement:
++ *	This product includes software developed by the University of
++ *	California, Berkeley and its contributors.
++ * 4. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)bog.h	8.1 (Berkeley) 6/11/93
++ */
++
++#define LOADDICT		1	/* Load the dictionary for speed */
++
++/*
++ * Locations for the dictionary (generated by mkdict),
++ * index (generated by mkindex), and helpfile
++ */
++#define DICT			"/usr/share/games/boggle/dictionary"
++#define DICTINDEX		"/usr/share/games/boggle/dictindex"
++#define HELPFILE		"/usr/share/games/boggle/helpfile"
++
++/*
++ * The theoretical maximum for MAXWORDLEN is ('a' - 1) == 96
++ */
++#define MAXWORDLEN		40	/* Maximum word length */
++#define MAXPWORDS		200	/* Maximum number of player's words */
++#define MAXMWORDS		200	/* Maximum number of machine's words */
++#define MAXPSPACE		2000	/* Space for player's words */
++#define MAXMSPACE		4000	/* Space for machines's words */
++
++#define MAXCOLS			20
++
++/*
++ * The following determine the screen layout
++ */
++#define PROMPT_COL		20
++#define PROMPT_LINE		2
++
++#define BOARD_COL		0
++#define BOARD_LINE		0
++
++#define SCORE_COL		20
++#define SCORE_LINE		0
++
++#define LIST_COL		0
++#define LIST_LINE		10
++
++#define TIMER_COL		20
++#define TIMER_LINE		2
++
++/*
++ * Internal dictionary index
++ * Initialized from the file created by mkindex
++ */
++struct dictindex {
++	long start;
++	long length;
++};
+diff -Nur bsd-games-2.14.orig/canfield/canfield/pathnames.h bsd-games-2.14/canfield/canfield/pathnames.h
+--- bsd-games-2.14.orig/canfield/canfield/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/canfield/canfield/pathnames.h	2003-07-01 20:18:46.000000000 +0200
+@@ -0,0 +1,40 @@
++/* Automatically generated from canfield/canfield/pathnames.h.in.  Do not edit.  */
++/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:08:34 cgd Exp $	*/
++
++/*-
++ * Copyright (c) 1990, 1993
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. All advertising materials mentioning features or use of this software
++ *    must display the following acknowledgement:
++ *	This product includes software developed by the University of
++ *	California, Berkeley and its contributors.
++ * 4. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
++ */
++
++#define	_PATH_SCORE	"/var/games/cfscores"
++
+diff -Nur bsd-games-2.14.orig/cribbage/pathnames.h bsd-games-2.14/cribbage/pathnames.h
+--- bsd-games-2.14.orig/cribbage/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/cribbage/pathnames.h	2003-07-01 20:18:46.000000000 +0200
+@@ -0,0 +1,41 @@
++/* Automatically generated from cribbage/pathnames.h.in.  Do not edit.  */
++/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:08:56 cgd Exp $	*/
++
++/*-
++ * Copyright (c) 1990, 1993
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. All advertising materials mentioning features or use of this software
++ *    must display the following acknowledgement:
++ *	This product includes software developed by the University of
++ *	California, Berkeley and its contributors.
++ * 4. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
++ */
++
++#define	_PATH_INSTR	"/usr/share/games/cribbage.instr"
++#define	_PATH_LOG	"/var/games/criblog"
++#define	_PATH_MORE	"/usr/bin/less"
+diff -Nur bsd-games-2.14.orig/dm/pathnames.h bsd-games-2.14/dm/pathnames.h
+--- bsd-games-2.14.orig/dm/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/dm/pathnames.h	2003-07-01 20:18:46.000000000 +0200
+@@ -0,0 +1,43 @@
++/* Automatically generated from dm/pathnames.h.in.  Do not edit.  */
++/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:09:08 cgd Exp $	*/
++
++/*
++ * Copyright (c) 1989, 1993
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. All advertising materials mentioning features or use of this software
++ *    must display the following acknowledgement:
++ *	This product includes software developed by the University of
++ *	California, Berkeley and its contributors.
++ * 4. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
++ */
++
++#define	_PATH_CONFIG	"/etc/dm.conf"
++#define	_PATH_HIDE	"/usr/lib/games/dm/"
++#undef _PATH_LOG
++#define	_PATH_LOG	"/var/games/games.log"
++#define	_PATH_NOGAMES	"/etc/nogames"
+diff -Nur bsd-games-2.14.orig/fish/pathnames.h bsd-games-2.14/fish/pathnames.h
+--- bsd-games-2.14.orig/fish/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/fish/pathnames.h	2003-07-01 20:18:46.000000000 +0200
+@@ -0,0 +1,40 @@
++/* Automatically generated from fish/pathnames.h.in.  Do not edit.  */
++/*	$NetBSD: pathnames.h,v 1.3 1995/03/23 08:28:21 cgd Exp $	*/
++
++/*-
++ * Copyright (c) 1990, 1993
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. All advertising materials mentioning features or use of this software
++ *    must display the following acknowledgement:
++ *	This product includes software developed by the University of
++ *	California, Berkeley and its contributors.
++ * 4. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
++ */
++
++#define	_PATH_INSTR	"/usr/share/games/fish.instr"
++#define	_PATH_MORE	"/usr/bin/less"
+diff -Nur bsd-games-2.14.orig/GNUmakefile bsd-games-2.14/GNUmakefile
+--- bsd-games-2.14.orig/GNUmakefile	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/GNUmakefile	2003-07-01 20:18:53.000000000 +0200
 @@ -0,0 +1,1785 @@
 +# GNUmakefile - automatically generated by configure.  Do not edit.
 +
@@ -801,10 +1162,10 @@ diff -Nur bsd-games-2.13.orig/GNUmakefile bsd-games-2.13/GNUmakefile
 +	$(CC) $(LDFLAGS) $^ $(NCURSES_LIB) $(BASE_LIBS) -o $@
 +
 +ifneq ($(nodep),true)
-+include  battlestar/battlestar.d battlestar/com1.d battlestar/com2.d battlestar/com3.d battlestar/com4.d battlestar/com5.d battlestar/com6.d battlestar/com7.d battlestar/cypher.d battlestar/dayfile.d battlestar/dayobjs.d battlestar/fly.d battlestar/getcom.d battlestar/globals.d battlestar/init.d battlestar/misc.d battlestar/nightfile.d battlestar/nightobjs.d battlestar/parse.d battlestar/room.d battlestar/save.d battlestar/words.d lib/fgetln.d
++include  battlestar/battlestar.d battlestar/command1.d battlestar/command2.d battlestar/command3.d battlestar/command4.d battlestar/command5.d battlestar/command6.d battlestar/command7.d battlestar/cypher.d battlestar/dayfile.d battlestar/dayobjs.d battlestar/fly.d battlestar/getcom.d battlestar/globals.d battlestar/init.d battlestar/misc.d battlestar/nightfile.d battlestar/nightobjs.d battlestar/parse.d battlestar/room.d battlestar/save.d battlestar/words.d lib/fgetln.d
 +endif
 +
-+battlestar/battlestar:	 battlestar/battlestar.o battlestar/com1.o battlestar/com2.o battlestar/com3.o battlestar/com4.o battlestar/com5.o battlestar/com6.o battlestar/com7.o battlestar/cypher.o battlestar/dayfile.o battlestar/dayobjs.o battlestar/fly.o battlestar/getcom.o battlestar/globals.o battlestar/init.o battlestar/misc.o battlestar/nightfile.o battlestar/nightobjs.o battlestar/parse.o battlestar/room.o battlestar/save.o battlestar/words.o lib/fgetln.o
++battlestar/battlestar:	 battlestar/battlestar.o battlestar/command1.o battlestar/command2.o battlestar/command3.o battlestar/command4.o battlestar/command5.o battlestar/command6.o battlestar/command7.o battlestar/cypher.o battlestar/dayfile.o battlestar/dayobjs.o battlestar/fly.o battlestar/getcom.o battlestar/globals.o battlestar/init.o battlestar/misc.o battlestar/nightfile.o battlestar/nightobjs.o battlestar/parse.o battlestar/room.o battlestar/save.o battlestar/words.o lib/fgetln.o
 +	$(CC) $(LDFLAGS) $^ $(NCURSES_LIB) $(BASE_LIBS) -o $@
 +
 +ifneq ($(nodep),true)
@@ -1787,543 +2148,9 @@ diff -Nur bsd-games-2.13.orig/GNUmakefile bsd-games-2.13/GNUmakefile
 +info dvi:
 +	@echo "This package comes with no Texinfo documentation."
 +
-diff -Nur bsd-games-2.13.orig/Makeconfig bsd-games-2.13/Makeconfig
---- bsd-games-2.13.orig/Makeconfig	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/Makeconfig	Sun Jul 28 12:31:06 2002
-@@ -0,0 +1,127 @@
-+# Automatically generated from Makeconfig.in.  Do not edit.
-+# Makeconfig.in - configuration included in Makefiles after substitution.
-+#
-+# Copyright (c) 1997, 1998, 1999, 2000 Joseph Samuel Myers.
-+# All rights reserved.
-+#
-+# Redistribution and use in source and binary forms, with or without
-+# modification, are permitted provided that the following conditions
-+# are met:
-+# 1. Redistributions of source code must retain the above copyright
-+#    notice, this list of conditions and the following disclaimer.
-+# 2. Redistributions in binary form must reproduce the above copyright
-+#    notice, this list of conditions and the following disclaimer in the
-+#    documentation and/or other materials provided with the distribution.
-+# 3. The name of the author may not be used to endorse or promote products
-+#    derived from this software without specific prior written permission.
-+#
-+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-+# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-+# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-+# IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
-+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-+# SUCH DAMAGE.
-+
-+# If some variables are unexpanded in Makeconfig, this shouldn't be a
-+# problem, it will be because they weren't configured since the relevant
-+# games weren't being built.
-+
-+# Source directory
-+SRCDIR := 
-+# Build directories
-+BUILDDIRS := adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dm fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump
-+# Installation prefix
-+INSTALL_PREFIX := 
-+# Games directory
-+GAMESDIR := /usr/bin
-+# Daemon directory
-+SBINDIR := /usr/bin
-+# Other binaries directory
-+USRBINDIR := 
-+# Manual pages, section 6
-+MAN6DIR := /usr/share/man/man6
-+# Manual pages, section 8
-+MAN8DIR := /usr/share/man/man8
-+# Manual pages, section 5
-+MAN5DIR := /usr/share/man/man5
-+# Constant data (arch-independent)
-+SHAREDIR := /usr/share/games
-+# Variable data
-+VARLIBDIR := /var/games
-+# Directory for hidden games (dm)
-+LIBEXECDIR := /usr/lib/games/dm
-+# Installation commands, with install -c -o whatever -s etc.
-+INSTALL_BINARY := install -c -m 0755
-+INSTALL_SCRIPT := install -c -m 0755
-+INSTALL_SCORE_GAME := install -c -m 0755
-+INSTALL_DAEMON := install -c -m 0755
-+INSTALL_MANUAL := ./install-man
-+INSTALL_DATA := install -c -m 0644
-+INSTALL_VARDATA := install -c -m 0644
-+INSTALL_DM := install -c -m 2755
-+INSTALL_SAIL_DIR := install -d -m 0750
-+INSTALL_HACK_DIR := @install_hack_dir@
-+# Is INSTALL_VARDATA actually needed (for games that start with non-empty
-+# scorefile?)
-+# For games which can start with empty scorefile we do:
-+INSTALL_SCORE_FILE := ./install-score
-+# Definitions of INSTALL_* that may have -s added
-+# This first one should no longer be needed
-+DEFS_TO_PASS := INSTALL_BINARY="$(INSTALL_BINARY)" \
-+	INSTALL_SCORE_GAME="$(INSTALL_SCORE_GAME)" \
-+	INSTALL_DAEMON="$(INSTALL_DAEMON)" INSTALL_DM="$(INSTALL_DM)"
-+# For the top level install-strip target
-+DEFS_TO_PASS_STRIP := INSTALL_BINARY="$(INSTALL_BINARY) -s" \
-+	INSTALL_SCORE_GAME="$(INSTALL_SCORE_GAME) -s" \
-+	INSTALL_DAEMON="$(INSTALL_DAEMON) -s" INSTALL_DM="$(INSTALL_DM) -s"
-+# srcdir/hide-game or :
-+HIDE_GAME := :
-+
-+# Compilation details
-+CC := gcc
-+OPTIMIZE := -g -O2
-+WARNING := -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wcast-align -Wcast-qual -Wwrite-strings
-+CFLAGS := $(OPTIMIZE) $(WARNING) 
-+LDFLAGS := 
-+FGETLN_DEFS := 
-+GETLOADAVG_DEFS := 
-+NCURSES_LIB := -lncurses
-+NCURSES_INCS := -I/usr/include/ncurses
-+BASE_INCS := -Iinclude $(NCURSES_INCS)
-+BASE_LIBS := 
-+YACC := bison -y
-+LEX := flex
-+LEX_LIB := -lfl
-+
-+# More paths
-+PAGER := /usr/bin/less
-+
-+# Individual games
-+ATC_DIR := /usr/share/games/atc
-+ATC_SCOREFILE := /var/games/atc_score
-+BATTLESTAR_SCOREFILE := /var/games/battlestar.log
-+BOGGLE_DIR := /usr/share/games/boggle
-+DICTIONARY_SRC := /usr/share/dict/words
-+CANFIELD_SCOREFILE := /var/games/cfscores
-+CRIBBAGE_INSTRFILE := /usr/share/games/cribbage.instr
-+CRIBBAGE_SCOREFILE := /var/games/criblog
-+FISH_INSTRFILE := /usr/share/games/fish.instr
-+FORTUNE_TYPE := @fortune_type@
-+HACK_DIR := @hack_dir@
-+MONOP_CARDSFILE := /usr/share/games/monop-cards.pck
-+PHANTASIA_DIR := /var/games/phantasia
-+QUIZ_DIR := /usr/share/games/quiz
-+ROBOTS_SCOREFILE := /var/games/robots_roll
-+ROGUE_SCOREFILE := @rogue_scorefile@
-+SAIL_SCOREFILE := /var/games/saillog
-+SAIL_DIR := /var/games/sail
-+SNAKE_SCOREFILE := /var/games/snake.log
-+SNAKE_RAWSCOREFILE := /var/games/snakerawscores
-+TETRIS_SCOREFILE := /var/games/tetris-bsd.scores
-+WTF_ACRONYMFILE := /usr/share/misc/acronyms
-+WUMP_INFOFILE := /usr/share/games/wump.info
-diff -Nur bsd-games-2.13.orig/Makeconfig.in bsd-games-2.13/Makeconfig.in
---- bsd-games-2.13.orig/Makeconfig.in	Wed Apr 19 22:03:00 2000
-+++ bsd-games-2.13/Makeconfig.in	Sun Jul 28 12:26:53 2002
-@@ -31,7 +31,7 @@
- # games weren't being built.
- 
- # Source directory
--SRCDIR := @srcdir@
-+SRCDIR := .
- # Build directories
- BUILDDIRS := @build_dirs@
- # Installation prefix
-@@ -59,7 +59,7 @@
- INSTALL_SCRIPT := @install_script@
- INSTALL_SCORE_GAME := @install_score_game@
- INSTALL_DAEMON := @install_daemon@
--INSTALL_MANUAL := @srcdir@/install-man
-+INSTALL_MANUAL := ./install-man
- INSTALL_DATA := @install_constdata@
- INSTALL_VARDATA := @install_vardata@
- INSTALL_DM := @install_dm@
-@@ -68,7 +68,7 @@
- # Is INSTALL_VARDATA actually needed (for games that start with non-empty
- # scorefile?)
- # For games which can start with empty scorefile we do:
--INSTALL_SCORE_FILE := @srcdir@/install-score
-+INSTALL_SCORE_FILE := ./install-score
- # Definitions of INSTALL_* that may have -s added
- # This first one should no longer be needed
- DEFS_TO_PASS := INSTALL_BINARY="$(INSTALL_BINARY)" \
-diff -Nur bsd-games-2.13.orig/atc/pathnames.h bsd-games-2.13/atc/pathnames.h
---- bsd-games-2.13.orig/atc/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/atc/pathnames.h	Sun Jul 28 12:31:06 2002
-@@ -0,0 +1,42 @@
-+/* Automatically generated from atc/pathnames.h.in.  Do not edit.  */
-+/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:04:28 cgd Exp $	*/
-+
-+/*-
-+ * Copyright (c) 1990, 1993
-+ *	The Regents of the University of California.  All rights reserved.
-+ *
-+ * Redistribution and use in source and binary forms, with or without
-+ * modification, are permitted provided that the following conditions
-+ * are met:
-+ * 1. Redistributions of source code must retain the above copyright
-+ *    notice, this list of conditions and the following disclaimer.
-+ * 2. Redistributions in binary form must reproduce the above copyright
-+ *    notice, this list of conditions and the following disclaimer in the
-+ *    documentation and/or other materials provided with the distribution.
-+ * 3. All advertising materials mentioning features or use of this software
-+ *    must display the following acknowledgement:
-+ *	This product includes software developed by the University of
-+ *	California, Berkeley and its contributors.
-+ * 4. Neither the name of the University nor the names of its contributors
-+ *    may be used to endorse or promote products derived from this software
-+ *    without specific prior written permission.
-+ *
-+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-+ * SUCH DAMAGE.
-+ *
-+ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
-+ */
-+
-+#include <paths.h>
-+
-+#define	_PATH_GAMES	"/usr/share/games/atc/"
-+#define	_PATH_SCORE	"/var/games/atc_score"
-diff -Nur bsd-games-2.13.orig/battlestar/pathnames.h bsd-games-2.13/battlestar/pathnames.h
---- bsd-games-2.13.orig/battlestar/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/battlestar/pathnames.h	Sun Jul 28 12:31:06 2002
-@@ -0,0 +1,39 @@
-+/* Automatically generated from battlestar/pathnames.h.in.  Do not edit.  */
-+/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:07:51 cgd Exp $	*/
-+
-+/*-
-+ * Copyright (c) 1990, 1993
-+ *	The Regents of the University of California.  All rights reserved.
-+ *
-+ * Redistribution and use in source and binary forms, with or without
-+ * modification, are permitted provided that the following conditions
-+ * are met:
-+ * 1. Redistributions of source code must retain the above copyright
-+ *    notice, this list of conditions and the following disclaimer.
-+ * 2. Redistributions in binary form must reproduce the above copyright
-+ *    notice, this list of conditions and the following disclaimer in the
-+ *    documentation and/or other materials provided with the distribution.
-+ * 3. All advertising materials mentioning features or use of this software
-+ *    must display the following acknowledgement:
-+ *	This product includes software developed by the University of
-+ *	California, Berkeley and its contributors.
-+ * 4. Neither the name of the University nor the names of its contributors
-+ *    may be used to endorse or promote products derived from this software
-+ *    without specific prior written permission.
-+ *
-+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-+ * SUCH DAMAGE.
-+ *
-+ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
-+ */
-+
-+#define	_PATH_SCORE	"/var/games/battlestar.log"
-diff -Nur bsd-games-2.13.orig/boggle/boggle/bog.h bsd-games-2.13/boggle/boggle/bog.h
---- bsd-games-2.13.orig/boggle/boggle/bog.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/boggle/boggle/bog.h	Sun Jul 28 12:31:06 2002
-@@ -0,0 +1,88 @@
-+/* Automatically generated from boggle/boggle/bog.h.in.  Do not edit.  */
-+/*	$NetBSD: bog.h,v 1.2 1995/03/21 12:14:32 cgd Exp $	*/
-+
-+/*-
-+ * Copyright (c) 1993
-+ *	The Regents of the University of California.  All rights reserved.
-+ *
-+ * This code is derived from software contributed to Berkeley by
-+ * Barry Brachman.
-+ *
-+ * Redistribution and use in source and binary forms, with or without
-+ * modification, are permitted provided that the following conditions
-+ * are met:
-+ * 1. Redistributions of source code must retain the above copyright
-+ *    notice, this list of conditions and the following disclaimer.
-+ * 2. Redistributions in binary form must reproduce the above copyright
-+ *    notice, this list of conditions and the following disclaimer in the
-+ *    documentation and/or other materials provided with the distribution.
-+ * 3. All advertising materials mentioning features or use of this software
-+ *    must display the following acknowledgement:
-+ *	This product includes software developed by the University of
-+ *	California, Berkeley and its contributors.
-+ * 4. Neither the name of the University nor the names of its contributors
-+ *    may be used to endorse or promote products derived from this software
-+ *    without specific prior written permission.
-+ *
-+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-+ * SUCH DAMAGE.
-+ *
-+ *	@(#)bog.h	8.1 (Berkeley) 6/11/93
-+ */
-+
-+#define LOADDICT		1	/* Load the dictionary for speed */
-+
-+/*
-+ * Locations for the dictionary (generated by mkdict),
-+ * index (generated by mkindex), and helpfile
-+ */
-+#define DICT			"/usr/share/games/boggle/dictionary"
-+#define DICTINDEX		"/usr/share/games/boggle/dictindex"
-+#define HELPFILE		"/usr/share/games/boggle/helpfile"
-+
-+/*
-+ * The theoretical maximum for MAXWORDLEN is ('a' - 1) == 96
-+ */
-+#define MAXWORDLEN		40	/* Maximum word length */
-+#define MAXPWORDS		200	/* Maximum number of player's words */
-+#define MAXMWORDS		200	/* Maximum number of machine's words */
-+#define MAXPSPACE		2000	/* Space for player's words */
-+#define MAXMSPACE		4000	/* Space for machines's words */
-+
-+#define MAXCOLS			20
-+
-+/*
-+ * The following determine the screen layout
-+ */
-+#define PROMPT_COL		20
-+#define PROMPT_LINE		2
-+
-+#define BOARD_COL		0
-+#define BOARD_LINE		0
-+
-+#define SCORE_COL		20
-+#define SCORE_LINE		0
-+
-+#define LIST_COL		0
-+#define LIST_LINE		10
-+
-+#define TIMER_COL		20
-+#define TIMER_LINE		2
-+
-+/*
-+ * Internal dictionary index
-+ * Initialized from the file created by mkindex
-+ */
-+struct dictindex {
-+	long start;
-+	long length;
-+};
-diff -Nur bsd-games-2.13.orig/canfield/canfield/pathnames.h bsd-games-2.13/canfield/canfield/pathnames.h
---- bsd-games-2.13.orig/canfield/canfield/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/canfield/canfield/pathnames.h	Sun Jul 28 12:31:06 2002
-@@ -0,0 +1,40 @@
-+/* Automatically generated from canfield/canfield/pathnames.h.in.  Do not edit.  */
-+/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:08:34 cgd Exp $	*/
-+
-+/*-
-+ * Copyright (c) 1990, 1993
-+ *	The Regents of the University of California.  All rights reserved.
-+ *
-+ * Redistribution and use in source and binary forms, with or without
-+ * modification, are permitted provided that the following conditions
-+ * are met:
-+ * 1. Redistributions of source code must retain the above copyright
-+ *    notice, this list of conditions and the following disclaimer.
-+ * 2. Redistributions in binary form must reproduce the above copyright
-+ *    notice, this list of conditions and the following disclaimer in the
-+ *    documentation and/or other materials provided with the distribution.
-+ * 3. All advertising materials mentioning features or use of this software
-+ *    must display the following acknowledgement:
-+ *	This product includes software developed by the University of
-+ *	California, Berkeley and its contributors.
-+ * 4. Neither the name of the University nor the names of its contributors
-+ *    may be used to endorse or promote products derived from this software
-+ *    without specific prior written permission.
-+ *
-+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-+ * SUCH DAMAGE.
-+ *
-+ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
-+ */
-+
-+#define	_PATH_SCORE	"/var/games/cfscores"
-+
-diff -Naur bsd-games-2.10/configure bsd-games-2.10-patched/configure
---- bsd-games-2.10/configure	Mon Nov 15 18:32:20 1999
-+++ bsd-games-2.10-patched/configure	Fri Apr 28 21:23:44 2000
-@@ -40,7 +40,7 @@
- 
- subst_vars=srcdir
- 
--srcdir="`pwd`"
-+srcdir='$(SRCDIR)'
- 
- ask () {
-     long_query="$1"
-diff -Nur bsd-games-2.13.orig/cribbage/pathnames.h bsd-games-2.13/cribbage/pathnames.h
---- bsd-games-2.13.orig/cribbage/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/cribbage/pathnames.h	Sun Jul 28 12:31:06 2002
-@@ -0,0 +1,41 @@
-+/* Automatically generated from cribbage/pathnames.h.in.  Do not edit.  */
-+/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:08:56 cgd Exp $	*/
-+
-+/*-
-+ * Copyright (c) 1990, 1993
-+ *	The Regents of the University of California.  All rights reserved.
-+ *
-+ * Redistribution and use in source and binary forms, with or without
-+ * modification, are permitted provided that the following conditions
-+ * are met:
-+ * 1. Redistributions of source code must retain the above copyright
-+ *    notice, this list of conditions and the following disclaimer.
-+ * 2. Redistributions in binary form must reproduce the above copyright
-+ *    notice, this list of conditions and the following disclaimer in the
-+ *    documentation and/or other materials provided with the distribution.
-+ * 3. All advertising materials mentioning features or use of this software
-+ *    must display the following acknowledgement:
-+ *	This product includes software developed by the University of
-+ *	California, Berkeley and its contributors.
-+ * 4. Neither the name of the University nor the names of its contributors
-+ *    may be used to endorse or promote products derived from this software
-+ *    without specific prior written permission.
-+ *
-+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-+ * SUCH DAMAGE.
-+ *
-+ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
-+ */
-+
-+#define	_PATH_INSTR	"/usr/share/games/cribbage.instr"
-+#define	_PATH_LOG	"/var/games/criblog"
-+#define	_PATH_MORE	"/usr/bin/less"
-diff -Nur bsd-games-2.13.orig/dm/pathnames.h bsd-games-2.13/dm/pathnames.h
---- bsd-games-2.13.orig/dm/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/dm/pathnames.h	Sun Jul 28 12:31:07 2002
-@@ -0,0 +1,43 @@
-+/* Automatically generated from dm/pathnames.h.in.  Do not edit.  */
-+/*	$NetBSD: pathnames.h,v 1.3 1995/03/21 15:09:08 cgd Exp $	*/
-+
-+/*
-+ * Copyright (c) 1989, 1993
-+ *	The Regents of the University of California.  All rights reserved.
-+ *
-+ * Redistribution and use in source and binary forms, with or without
-+ * modification, are permitted provided that the following conditions
-+ * are met:
-+ * 1. Redistributions of source code must retain the above copyright
-+ *    notice, this list of conditions and the following disclaimer.
-+ * 2. Redistributions in binary form must reproduce the above copyright
-+ *    notice, this list of conditions and the following disclaimer in the
-+ *    documentation and/or other materials provided with the distribution.
-+ * 3. All advertising materials mentioning features or use of this software
-+ *    must display the following acknowledgement:
-+ *	This product includes software developed by the University of
-+ *	California, Berkeley and its contributors.
-+ * 4. Neither the name of the University nor the names of its contributors
-+ *    may be used to endorse or promote products derived from this software
-+ *    without specific prior written permission.
-+ *
-+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-+ * SUCH DAMAGE.
-+ *
-+ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
-+ */
-+
-+#define	_PATH_CONFIG	"/etc/dm.conf"
-+#define	_PATH_HIDE	"/usr/lib/games/dm/"
-+#undef _PATH_LOG
-+#define	_PATH_LOG	"/var/games/games.log"
-+#define	_PATH_NOGAMES	"/etc/nogames"
-diff -Nur bsd-games-2.13.orig/fish/pathnames.h bsd-games-2.13/fish/pathnames.h
---- bsd-games-2.13.orig/fish/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/fish/pathnames.h	Sun Jul 28 12:31:07 2002
-@@ -0,0 +1,40 @@
-+/* Automatically generated from fish/pathnames.h.in.  Do not edit.  */
-+/*	$NetBSD: pathnames.h,v 1.3 1995/03/23 08:28:21 cgd Exp $	*/
-+
-+/*-
-+ * Copyright (c) 1990, 1993
-+ *	The Regents of the University of California.  All rights reserved.
-+ *
-+ * Redistribution and use in source and binary forms, with or without
-+ * modification, are permitted provided that the following conditions
-+ * are met:
-+ * 1. Redistributions of source code must retain the above copyright
-+ *    notice, this list of conditions and the following disclaimer.
-+ * 2. Redistributions in binary form must reproduce the above copyright
-+ *    notice, this list of conditions and the following disclaimer in the
-+ *    documentation and/or other materials provided with the distribution.
-+ * 3. All advertising materials mentioning features or use of this software
-+ *    must display the following acknowledgement:
-+ *	This product includes software developed by the University of
-+ *	California, Berkeley and its contributors.
-+ * 4. Neither the name of the University nor the names of its contributors
-+ *    may be used to endorse or promote products derived from this software
-+ *    without specific prior written permission.
-+ *
-+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-+ * SUCH DAMAGE.
-+ *
-+ *	@(#)pathnames.h	8.1 (Berkeley) 5/31/93
-+ */
-+
-+#define	_PATH_INSTR	"/usr/share/games/fish.instr"
-+#define	_PATH_MORE	"/usr/bin/less"
-diff -Nur bsd-games-2.13.orig/hangman/pathnames.h bsd-games-2.13/hangman/pathnames.h
---- bsd-games-2.13.orig/hangman/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/hangman/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/hangman/pathnames.h bsd-games-2.14/hangman/pathnames.h
+--- bsd-games-2.14.orig/hangman/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/hangman/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,39 @@
 +/* Automatically generated from hangman/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.3 1995/03/23 08:32:51 cgd Exp $	*/
@@ -2364,9 +2191,9 @@ diff -Nur bsd-games-2.13.orig/hangman/pathnames.h bsd-games-2.13/hangman/pathnam
 + */
 +
 +#define	_PATH_DICT	"/usr/share/dict/words"
-diff -Nur bsd-games-2.13.orig/hide-game bsd-games-2.13/hide-game
---- bsd-games-2.13.orig/hide-game	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/hide-game	Sun Jul 28 12:31:06 2002
+diff -Nur bsd-games-2.14.orig/hide-game bsd-games-2.14/hide-game
+--- bsd-games-2.14.orig/hide-game	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/hide-game	2003-07-01 20:18:45.000000000 +0200
 @@ -0,0 +1,35 @@
 +#!/bin/sh
 +# Automatically generated from hide-game.in.  Do not edit.
@@ -2400,20 +2227,20 @@ diff -Nur bsd-games-2.13.orig/hide-game bsd-games-2.13/hide-game
 +
 +set -e
 +
-+test -d /usr/lib/games/dm || install -d -m 0750 /usr/lib/games/dm
-+mv -f /usr/bin/$1 /usr/lib/games/dm
-+ln -s dm /usr/bin/$1
-diff -Nur bsd-games-2.13.orig/include/bsd-games.h bsd-games-2.13/include/bsd-games.h
---- bsd-games-2.13.orig/include/bsd-games.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/include/bsd-games.h	Sun Jul 28 12:30:45 2002
++test -d $INSTALL_PREFIX/usr/lib/games/dm || install -d -m 0750 $INSTALL_PREFIX/usr/lib/games/dm
++mv -f $INSTALL_PREFIX/usr/bin/$1 $INSTALL_PREFIX/usr/lib/games/dm
++ln -s dm $INSTALL_PREFIX/usr/bin/$1
+diff -Nur bsd-games-2.14.orig/include/bsd-games.h bsd-games-2.14/include/bsd-games.h
+--- bsd-games-2.14.orig/include/bsd-games.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/include/bsd-games.h	2003-07-01 20:18:18.000000000 +0200
 @@ -0,0 +1,4 @@
 +#ifndef LINUX_BSD_GAMES_H
 +#define LINUX_BSD_GAMES_H 1
 +#define HAVE_getloadavg 1
 +#endif /* !defined(LINUX_BSD_GAMES_H) */
-diff -Nur bsd-games-2.13.orig/install-man bsd-games-2.13/install-man
---- bsd-games-2.13.orig/install-man	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/install-man	Sun Jul 28 12:31:06 2002
+diff -Nur bsd-games-2.14.orig/install-man bsd-games-2.14/install-man
+--- bsd-games-2.14.orig/install-man	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/install-man	2003-07-01 20:18:46.000000000 +0200
 @@ -0,0 +1,94 @@
 +#!/bin/sh
 +# Automatically generated from install-man.in.  Do not edit.
@@ -2509,9 +2336,9 @@ diff -Nur bsd-games-2.13.orig/install-man bsd-games-2.13/install-man
 +    echo "usage: $0 manpage [ manpage ]" >&2
 +    exit 1
 +fi
-diff -Nur bsd-games-2.13.orig/install-score bsd-games-2.13/install-score
---- bsd-games-2.13.orig/install-score	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/install-score	Sun Jul 28 12:31:06 2002
+diff -Nur bsd-games-2.14.orig/install-score bsd-games-2.14/install-score
+--- bsd-games-2.14.orig/install-score	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/install-score	2003-07-01 20:18:46.000000000 +0200
 @@ -0,0 +1,47 @@
 +#!/bin/sh
 +# Automatically generated from install-score.in.  Do not edit.
@@ -2560,9 +2387,142 @@ diff -Nur bsd-games-2.13.orig/install-score bsd-games-2.13/install-score
 +    chown @vardata_owner@:@vardata_group@ "$scorefile"
 +fi
 +chmod "$perms" "$scorefile"
-diff -Nur bsd-games-2.13.orig/monop/pathnames.h bsd-games-2.13/monop/pathnames.h
---- bsd-games-2.13.orig/monop/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/monop/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/Makeconfig bsd-games-2.14/Makeconfig
+--- bsd-games-2.14.orig/Makeconfig	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/Makeconfig	2003-07-01 20:18:45.000000000 +0200
+@@ -0,0 +1,129 @@
++# Automatically generated from Makeconfig.in.  Do not edit.
++# Makeconfig.in - configuration included in Makefiles after substitution.
++#
++# Copyright (c) 1997, 1998, 1999, 2000, 2003 Joseph Samuel Myers.
++# All rights reserved.
++#
++# Redistribution and use in source and binary forms, with or without
++# modification, are permitted provided that the following conditions
++# are met:
++# 1. Redistributions of source code must retain the above copyright
++#    notice, this list of conditions and the following disclaimer.
++# 2. Redistributions in binary form must reproduce the above copyright
++#    notice, this list of conditions and the following disclaimer in the
++#    documentation and/or other materials provided with the distribution.
++# 3. The name of the author may not be used to endorse or promote products
++#    derived from this software without specific prior written permission.
++#
++# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
++# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
++# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
++# IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
++# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
++# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
++# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
++# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
++# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++# SUCH DAMAGE.
++
++# If some variables are unexpanded in Makeconfig, this shouldn't be a
++# problem, it will be because they weren't configured since the relevant
++# games weren't being built.
++
++# Source directory
++SRCDIR := /mnt/arch/temp/BUILD/bsd-games-2.14
++# Build directories
++BUILDDIRS := adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dm fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump
++# Installation prefix
++INSTALL_PREFIX := $INSTALL_PREFIX
++# Games directory
++GAMESDIR := /usr/bin
++# Daemon directory
++SBINDIR := /usr/sbin
++# Other binaries directory
++USRBINDIR := 
++# Manual pages, section 6
++MAN6DIR := /usr/share/man/man6
++# Manual pages, section 8
++MAN8DIR := /usr/share/man/man8
++# Manual pages, section 5
++MAN5DIR := /usr/share/man/man5
++# Constant data (arch-independent)
++SHAREDIR := /usr/share/games
++# Variable data
++VARLIBDIR := /var/games
++# Directory for hidden games (dm)
++LIBEXECDIR := /usr/lib/games/dm
++# Installation commands, with install -c -o whatever -s etc.
++INSTALL_BINARY := install -c -m 0755
++INSTALL_SCRIPT := install -c -m 0755
++INSTALL_SCORE_GAME := install -c -m 0755
++INSTALL_DAEMON := install -c -m 0755
++INSTALL_MANUAL := /mnt/arch/temp/BUILD/bsd-games-2.14/install-man
++INSTALL_DATA := install -c -m 0644
++INSTALL_VARDATA := install -c -m 0644
++INSTALL_DM := install -c -m 2755
++INSTALL_SAIL_DIR := install -d -m 0750
++INSTALL_HACK_DIR := @install_hack_dir@
++# Is INSTALL_VARDATA actually needed (for games that start with non-empty
++# scorefile?)
++# For games which can start with empty scorefile we do:
++INSTALL_SCORE_FILE := /mnt/arch/temp/BUILD/bsd-games-2.14/install-score
++# Definitions of INSTALL_* that may have -s added
++# This first one should no longer be needed
++DEFS_TO_PASS := INSTALL_BINARY="$(INSTALL_BINARY)" \
++	INSTALL_SCORE_GAME="$(INSTALL_SCORE_GAME)" \
++	INSTALL_DAEMON="$(INSTALL_DAEMON)" INSTALL_DM="$(INSTALL_DM)"
++# For the top level install-strip target
++DEFS_TO_PASS_STRIP := INSTALL_BINARY="$(INSTALL_BINARY) -s" \
++	INSTALL_SCORE_GAME="$(INSTALL_SCORE_GAME) -s" \
++	INSTALL_DAEMON="$(INSTALL_DAEMON) -s" INSTALL_DM="$(INSTALL_DM) -s"
++# srcdir/hide-game or :
++HIDE_GAME := :
++
++# Compilation details
++CC := gcc
++OPTIMIZE := -g -O2
++WARNING := -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wcast-align -Wcast-qual -Wwrite-strings
++CFLAGS := $(OPTIMIZE) $(WARNING) 
++LDFLAGS := 
++FGETLN_DEFS := 
++GETLOADAVG_DEFS := 
++NCURSES_LIB := -lncurses
++NCURSES_INCS := -I/usr/include/ncurses
++OPENSSL_LIB := 
++OPENSSL_INCS := 
++BASE_INCS := -Iinclude $(NCURSES_INCS) $(OPENSSL_INCS)
++BASE_LIBS := 
++YACC := bison -y
++LEX := flex
++LEX_LIB := -lfl
++
++# More paths
++PAGER := /usr/bin/less
++
++# Individual games
++ATC_DIR := /usr/share/games/atc
++ATC_SCOREFILE := /var/games/atc_score
++BATTLESTAR_SCOREFILE := /var/games/battlestar.log
++BOGGLE_DIR := /usr/share/games/boggle
++DICTIONARY_SRC := /usr/share/dict/words
++CANFIELD_SCOREFILE := /var/games/cfscores
++CRIBBAGE_INSTRFILE := /usr/share/games/cribbage.instr
++CRIBBAGE_SCOREFILE := /var/games/criblog
++FISH_INSTRFILE := /usr/share/games/fish.instr
++FORTUNE_TYPE := @fortune_type@
++HACK_DIR := @hack_dir@
++MONOP_CARDSFILE := /usr/share/games/monop-cards.pck
++PHANTASIA_DIR := /var/games/phantasia
++QUIZ_DIR := /usr/share/games/quiz
++ROBOTS_SCOREFILE := /var/games/robots_roll
++ROGUE_SCOREFILE := @rogue_scorefile@
++SAIL_SCOREFILE := /var/games/saillog
++SAIL_DIR := /var/games/sail
++SNAKE_SCOREFILE := /var/games/snake.log
++SNAKE_RAWSCOREFILE := /var/games/snakerawscores
++TETRIS_SCOREFILE := /var/games/tetris-bsd.scores
++WTF_ACRONYMFILE := /usr/share/misc/acronyms
++WUMP_INFOFILE := /usr/share/games/wump.info
+diff -Nur bsd-games-2.14.orig/monop/pathnames.h bsd-games-2.14/monop/pathnames.h
+--- bsd-games-2.14.orig/monop/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/monop/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,39 @@
 +/* Automatically generated from monop/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.3 1995/03/23 08:35:03 cgd Exp $	*/
@@ -2603,9 +2563,9 @@ diff -Nur bsd-games-2.13.orig/monop/pathnames.h bsd-games-2.13/monop/pathnames.h
 + */
 +
 +#define	_PATH_CARDS	"/usr/share/games/monop-cards.pck"
-diff -Nur bsd-games-2.13.orig/phantasia/pathnames.h bsd-games-2.13/phantasia/pathnames.h
---- bsd-games-2.13.orig/phantasia/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/phantasia/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/phantasia/pathnames.h bsd-games-2.14/phantasia/pathnames.h
+--- bsd-games-2.14.orig/phantasia/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/phantasia/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,47 @@
 +/* Automatically generated from phantasia/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.2 1995/03/24 03:59:17 cgd Exp $	*/
@@ -2654,9 +2614,9 @@ diff -Nur bsd-games-2.13.orig/phantasia/pathnames.h bsd-games-2.13/phantasia/pat
 +#define	_PATH_PEOPLE	"/var/games/phantasia/characs"
 +#define	_PATH_SCORE	"/var/games/phantasia/scoreboard"
 +#define	_PATH_VOID	"/var/games/phantasia/void"
-diff -Nur bsd-games-2.13.orig/quiz/pathnames.h bsd-games-2.13/quiz/pathnames.h
---- bsd-games-2.13.orig/quiz/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/quiz/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/quiz/pathnames.h bsd-games-2.14/quiz/pathnames.h
+--- bsd-games-2.14.orig/quiz/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/quiz/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,40 @@
 +/* Automatically generated from quiz/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.4 1995/04/22 10:16:55 cgd Exp $	*/
@@ -2698,9 +2658,9 @@ diff -Nur bsd-games-2.13.orig/quiz/pathnames.h bsd-games-2.13/quiz/pathnames.h
 +
 +#define	_PATH_PAGER	"/usr/bin/less"
 +#define	_PATH_QUIZIDX	"/usr/share/games/quiz/index"
-diff -Nur bsd-games-2.13.orig/robots/pathnames.h bsd-games-2.13/robots/pathnames.h
---- bsd-games-2.13.orig/robots/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/robots/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/robots/pathnames.h bsd-games-2.14/robots/pathnames.h
+--- bsd-games-2.14.orig/robots/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/robots/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,39 @@
 +/* Automatically generated from robots/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.3 1995/04/22 10:09:01 cgd Exp $	*/
@@ -2741,9 +2701,9 @@ diff -Nur bsd-games-2.13.orig/robots/pathnames.h bsd-games-2.13/robots/pathnames
 + */
 +
 +#define	_PATH_SCORE	"/var/games/robots_roll"
-diff -Nur bsd-games-2.13.orig/sail/pathnames.h bsd-games-2.13/sail/pathnames.h
---- bsd-games-2.13.orig/sail/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/sail/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/sail/pathnames.h bsd-games-2.14/sail/pathnames.h
+--- bsd-games-2.14.orig/sail/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/sail/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,41 @@
 +/* Automatically generated from sail/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.4 2000/02/09 22:27:56 jsm Exp $	*/
@@ -2786,9 +2746,9 @@ diff -Nur bsd-games-2.13.orig/sail/pathnames.h bsd-games-2.13/sail/pathnames.h
 +#define	_PATH_LOGFILE	"/var/games/saillog"
 +#define	_PATH_SYNC	"/var/games/sail/#sailsink.%d"
 +#define	_PATH_LOCK	"/var/games/sail/#saillock.%d"
-diff -Nur bsd-games-2.13.orig/snake/snake/pathnames.h bsd-games-2.13/snake/snake/pathnames.h
---- bsd-games-2.13.orig/snake/snake/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/snake/snake/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/snake/snake/pathnames.h bsd-games-2.14/snake/snake/pathnames.h
+--- bsd-games-2.14.orig/snake/snake/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/snake/snake/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,40 @@
 +/* Automatically generated from snake/snake/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.3 1995/04/22 08:34:33 cgd Exp $	*/
@@ -2830,10 +2790,10 @@ diff -Nur bsd-games-2.13.orig/snake/snake/pathnames.h bsd-games-2.13/snake/snake
 +
 +#define	_PATH_RAWSCORES	"/var/games/snakerawscores"
 +#define	_PATH_LOGFILE	"/var/games/snake.log"
-diff -Nur bsd-games-2.13.orig/subst.rules bsd-games-2.13/subst.rules
---- bsd-games-2.13.orig/subst.rules	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/subst.rules	Sun Jul 28 12:31:07 2002
-@@ -0,0 +1,117 @@
+diff -Nur bsd-games-2.14.orig/subst.rules bsd-games-2.14/subst.rules
+--- bsd-games-2.14.orig/subst.rules	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/subst.rules	2003-07-01 20:18:48.000000000 +0200
+@@ -0,0 +1,114 @@
 +Makeconfig:	Makeconfig.in subst.sed substscr
 +	./substscr g h Makeconfig.in Makeconfig
 +
@@ -2942,25 +2902,22 @@ diff -Nur bsd-games-2.13.orig/subst.rules bsd-games-2.13/subst.rules
 +tetris/tetris.6:	tetris/tetris.6.in subst.sed substscr
 +	./substscr g m tetris/tetris.6.in tetris/tetris.6
 +
-+trek/trek.6:	trek/trek.6.in subst.sed substscr
-+	./substscr g m trek/trek.6.in trek/trek.6
-+
 +wtf/wtf.6:	wtf/wtf.6.in subst.sed substscr
 +	./substscr g m wtf/wtf.6.in wtf/wtf.6
 +
 +wtf/wtf:	wtf/wtf.in subst.sed substscr
 +	./substscr g s wtf/wtf.in wtf/wtf
 +
-diff -Nur bsd-games-2.13.orig/subst.sed bsd-games-2.13/subst.sed
---- bsd-games-2.13.orig/subst.sed	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/subst.sed	Sun Jul 28 12:31:06 2002
-@@ -0,0 +1,77 @@
-+s%@srcdir@%/home/comp/rpm/BUILD/bsd-games-2.13%g
-+s%@install_prefix@%%g
-+s%@no_build_dirs@%fortune banner factor%g
+diff -Nur bsd-games-2.14.orig/subst.sed bsd-games-2.14/subst.sed
+--- bsd-games-2.14.orig/subst.sed	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/subst.sed	2003-07-01 20:18:45.000000000 +0200
+@@ -0,0 +1,80 @@
++s%@srcdir@%/mnt/arch/temp/BUILD/bsd-games-2.14%g
++s%@install_prefix@%$INSTALL_PREFIX%g
++s%@no_build_dirs@%banner factor fortune hack%g
 +s%@build_dirs@%adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dm fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump%g
 +s%@gamesdir@%/usr/bin%g
-+s%@sbindir@%/usr/bin%g
++s%@sbindir@%/usr/sbin%g
 +s%@usrbindir@%%g
 +s%@hidegame@%:%g
 +s%@use_dm@%n%g
@@ -2997,10 +2954,13 @@ diff -Nur bsd-games-2.13.orig/subst.sed bsd-games-2.13/subst.sed
 +s%@warning_flags@%-Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wcast-align -Wcast-qual -Wwrite-strings%g
 +s%@ncurses_lib@%-lncurses%g
 +s%@ncurses_includes@%-I/usr/include/ncurses%g
++s%@openssl_lib@%%g
++s%@openssl_includes@%%g
 +s%@other_cflags@%%g
 +s%@other_ldflags@%%g
 +s%@getloadavg_defs@%%g
 +s%@fgetln_defs@%%g
++s%@strlcpy_defs@%%g
 +s%@base_libs@%%g
 +s%@yacc@%bison -y%g
 +s%@lex@%flex%g
@@ -3032,9 +2992,9 @@ diff -Nur bsd-games-2.13.orig/subst.sed bsd-games-2.13/subst.sed
 +s%@tetris_scorefile@%/var/games/tetris-bsd.scores%g
 +s%@wtf_acronymfile@%/usr/share/misc/acronyms%g
 +s%@wump_infofile@%/usr/share/games/wump.info%g
-diff -Nur bsd-games-2.13.orig/tetris/pathnames.h bsd-games-2.13/tetris/pathnames.h
---- bsd-games-2.13.orig/tetris/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/tetris/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/tetris/pathnames.h bsd-games-2.14/tetris/pathnames.h
+--- bsd-games-2.14.orig/tetris/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/tetris/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,42 @@
 +/* Automatically generated from tetris/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.2 1995/04/22 07:42:37 cgd Exp $	*/
@@ -3078,9 +3038,9 @@ diff -Nur bsd-games-2.13.orig/tetris/pathnames.h bsd-games-2.13/tetris/pathnames
 + */
 +
 +#define _PATH_SCOREFILE	"/var/games/tetris-bsd.scores"
-diff -Nur bsd-games-2.13.orig/wump/pathnames.h bsd-games-2.13/wump/pathnames.h
---- bsd-games-2.13.orig/wump/pathnames.h	Thu Jan  1 01:00:00 1970
-+++ bsd-games-2.13/wump/pathnames.h	Sun Jul 28 12:31:07 2002
+diff -Nur bsd-games-2.14.orig/wump/pathnames.h bsd-games-2.14/wump/pathnames.h
+--- bsd-games-2.14.orig/wump/pathnames.h	1970-01-01 01:00:00.000000000 +0100
++++ bsd-games-2.14/wump/pathnames.h	2003-07-01 20:18:47.000000000 +0200
 @@ -0,0 +1,40 @@
 +/* Automatically generated from wump/pathnames.h.in.  Do not edit.  */
 +/*	$NetBSD: pathnames.h,v 1.3 1995/04/22 08:19:48 cgd Exp $	*/
