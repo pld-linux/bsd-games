@@ -11,7 +11,9 @@ Release:	1
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
+# Source0-md5:	cf33f61ce1f0c09a7473ac26a4a0a6ec
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
+# Source1-md5:	53f612734e8324dfc7d3658c33dee4cb
 Patch0:		%{name}-hole.patch
 Patch1:		%{name}-headers.patch
 Patch2:		%{name}-ospeed.patch
