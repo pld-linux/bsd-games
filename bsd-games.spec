@@ -89,7 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 /var/games/battlestar.log
 /var/games/cfscores
 /var/games/criblog
-/var/games/phantasia
 /var/games/robots_roll
 %attr(640,root,root) /var/games/phantasia/characs
 /var/games/phantasia/gold
