@@ -8,7 +8,7 @@ Summary(pt):	Pacote com vários jogos BSD
 Name:		bsd-games
 Version:	2.12
 Release:	2
-License:	Distributable
+License:	distributable
 Group:		Applications/Games
 Group(de):	Applikationen/Spiele
 Group(pl):	Aplikacje/Gry
