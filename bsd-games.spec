@@ -43,11 +43,10 @@ teachgammon, tetris-bsd, trek, wargames, worm, worms i wump
 %patch4 -p1
 
 %build
-make LDFLAGS="-s" CFLAGS="$RPM_OPT_FLAGS" SRCDIR=$RPM_BUILD_DIR
+make LDFLAGS="-s" OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-chmod +x install-man install-score
 make INSTALL_PREFIX="$RPM_BUILD_ROOT" install
 
 %clean
