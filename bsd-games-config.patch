@@ -1864,9 +1864,9 @@ diff -Naur bsd-games-2.10/Makeconfig bsd-games-2.10-patched/Makeconfig
 +# Installation prefix
 +INSTALL_PREFIX := 
 +# Games directory
-+GAMESDIR := /usr/games
++GAMESDIR := /usr/bin
 +# Daemon directory
-+SBINDIR := /usr/games
++SBINDIR := /usr/bin
 +# Other binaries directory
 +USRBINDIR := 
 +# Manual pages, section 6
@@ -2433,8 +2433,8 @@ diff -Naur bsd-games-2.10/hide-game bsd-games-2.10-patched/hide-game
 +set -e
 +
 +test -d /usr/lib/games/dm || install -d -m 0750 /usr/lib/games/dm
-+mv -f /usr/games/$1 /usr/lib/games/dm
-+ln -s dm /usr/games/$1
++mv -f /usr/bin/$1 /usr/lib/games/dm
++ln -s dm /usr/bin/$1
 diff -Naur bsd-games-2.10/include/bsd-games.h bsd-games-2.10-patched/include/bsd-games.h
 --- bsd-games-2.10/include/bsd-games.h	Thu Jan  1 01:00:00 1970
 +++ bsd-games-2.10-patched/include/bsd-games.h	Fri Apr 28 21:25:03 2000
@@ -2991,7 +2991,7 @@ diff -Naur bsd-games-2.10/subst.sed bsd-games-2.10-patched/subst.sed
 +s%@no_build_dirs@%fortune banner%g
 +s%@build_dirs@%adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dm factor fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump%g
 +s%@gamesdir@%/usr/games%g
-+s%@sbindir@%/usr/games%g
++s%@sbindir@%/usr/bin%g
 +s%@usrbindir@%%g
 +s%@hidegame@%:%g
 +s%@use_dm@%n%g
