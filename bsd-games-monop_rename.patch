@@ -1,0 +1,58 @@
+--- bsd-games-2.15/GNUmakefile.orig	Wed Sep 22 13:10:26 2004
++++ bsd-games-2.15/GNUmakefile	Wed Sep 22 13:10:26 2004
+@@ -912,7 +912,7 @@
+ include  monop/cards.d monop/execute.d monop/getinp.d monop/houses.d monop/jail.d monop/misc.d monop/monop.d monop/morg.d monop/print.d monop/prop.d monop/rent.d monop/roll.d monop/spec.d monop/trade.d
+ endif
+ 
+-monop/monop:	 monop/cards.o monop/execute.o monop/getinp.o monop/houses.o monop/jail.o monop/misc.o monop/monop.o monop/morg.o monop/print.o monop/prop.o monop/rent.o monop/roll.o monop/spec.o monop/trade.o
++monop/monopoly-game:	 monop/cards.o monop/execute.o monop/getinp.o monop/houses.o monop/jail.o monop/misc.o monop/monop.o monop/morg.o monop/print.o monop/prop.o monop/rent.o monop/roll.o monop/spec.o monop/trade.o
+ 	$(CC) $(LDFLAGS) $^  $(BASE_LIBS) -o $@
+ 
+ ifneq ($(nodep),true)
+@@ -1428,7 +1428,7 @@
+ 
+ .PHONY:	monop_clean
+ monop_clean:
+-	cd monop && rm -f -- a.out core *.o *.d *.i *.s *.d.tmp  monop initdeck $(monop_CLEANFILES)
++	cd monop && rm -f -- a.out core *.o *.d *.i *.s *.d.tmp  monop monopoly-game initdeck $(monop_CLEANFILES)
+ 
+ .PHONY:	monop_install monop_install-strip monop_installdirs
+ monop_install:	monop_installdirs
+diff -ur bsd-games-2.15/monop.orig/Makefrag bsd-games-2.15/monop/Makefrag
+--- bsd-games-2.15/monop.orig/Makefrag	Sun Sep 26 13:37:19 1999
++++ bsd-games-2.15/monop/Makefrag	Wed Sep 22 13:15:56 2004
+@@ -29,13 +29,14 @@
+ monop_CLEANFILES := cards.pck
+ monop_DIRS := $(GAMESDIR) $(MAN6DIR) $(shell dirname $(MONOP_CARDSFILE))
+ 
+-monop_all:	monop/monop monop/cards.pck monop/monop.6
++monop_all:	monop/monopoly-game monop/cards.pck monop/monop.6
+ 
+ monop/cards.pck:	monop/initdeck monop/cards.inp
+ 	$< monop/cards.inp $@
+ 
+ monop_install:	monop_all
+-	$(INSTALL_BINARY) monop/monop $(INSTALL_PREFIX)$(GAMESDIR)/monop
+-	$(HIDE_GAME) monop
+-	$(INSTALL_MANUAL) monop/monop.6
++	$(INSTALL_BINARY) monop/monopoly-game $(INSTALL_PREFIX)$(GAMESDIR)/monopoly-game
++	$(HIDE_GAME) monopoly-game
++	mv monop/monop.6 monop/monopoly-game.6
++	$(INSTALL_MANUAL) monop/monopoly-game.6
+ 	$(INSTALL_DATA) monop/cards.pck $(INSTALL_PREFIX)$(MONOP_CARDSFILE)
+diff -ur bsd-games-2.15/monop.orig/monop.6.in bsd-games-2.15/monop/monop.6.in
+--- bsd-games-2.15/monop.orig/monop.6.in	Wed Dec 17 03:46:49 2003
++++ bsd-games-2.15/monop/monop.6.in	Wed Sep 22 13:04:41 2004
+@@ -30,10 +30,10 @@
+ .\"	@(#)monop.6	6.5 (Berkeley) 3/25/93
+ .\"
+ .Dd March 25, 1993
+-.Dt MONOP 6
++.Dt MONOPONY-GAME 6
+ .Os
+ .Sh NAME
+-.Nm monop
++.Nm monopoly-game
+ .Nd Monopoly game
+ .Sh SYNOPSIS
+ .Nm
