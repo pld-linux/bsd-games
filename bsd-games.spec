@@ -22,6 +22,7 @@ Patch4:		%{name}-from.patch
 BuildRequires:	bison
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
+BuildRequires:	flex
 Requires:	textutils
 Requires:	words
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
