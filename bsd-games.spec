@@ -84,6 +84,8 @@ oyunlar içeren bir paket.
 # Ncurses includes []: -I/usr/include/ncurses
 # (the rest is default)
 
+# then change $RPM_BUILD_DIR path to "."
+
 %build
 %{__make} \
 	LDFLAGS="%{rpmldflags}" \
