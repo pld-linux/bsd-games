@@ -1,7 +1,7 @@
-Summary:	A collection of BSD (Berkeley Standard Distribution) games.
-Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution).
+Summary:	A collection of BSD (Berkeley Standard Distribution) games
+Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Name:		bsd-games
-Version:	2.10
+Version:	2.11
 Release:	1
 Copyright:	distributable
 Group:		Games
@@ -14,7 +14,6 @@ Patch3:		%{name}-ospeed.patch
 Patch4:		%{name}-config.patch
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
-Requires:	ncurses >= 5.0
 Requires:	textutils 
 Requires:	words
 Requires:	/usr/bin/frm
@@ -55,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_prefix}/games/*
+%attr(755,root,root) %{_bindir}/*
 %{_datadir}/games/*
 %{_datadir}/misc/acronyms
 /var/games/atc_score
