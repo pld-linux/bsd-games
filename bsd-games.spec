@@ -7,10 +7,11 @@ Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Summary(pt):	Pacote com vários jogos BSD
 Name:		bsd-games
 Version:	2.12
-Release:	2
+Release:	3
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://metalab.unc.edu/pub/Linux/games/%{name}-%{version}.tar.gz
+Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-hole.patch
 Patch1:		%{name}-headers.patch
 Patch2:		%{name}-ospeed.patch
@@ -75,7 +76,9 @@ chmod +x install-man install-score
 
 %{__make} INSTALL_PREFIX="$RPM_BUILD_ROOT" install
 
-rm -f $RPM_BUILD_ROOT{%{_bindir}/factor,%{_mandir}/man6/factor.6*}
+bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
+
+rm -f $RPM_BUILD_ROOT{%{_bindir}/factor,%{_mandir}/{,fi/}man6/factor.6*}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -104,3 +107,5 @@ rm -rf $RPM_BUILD_ROOT
 /var/games/snakerawscores
 /var/games/tetris-bsd.scores
 %{_mandir}/man*/*
+%lang(fi) %{_mandir}/fi/man*/*
+%lang(pl) %{_mandir}/pl/man*/*
