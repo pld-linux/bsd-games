@@ -7,7 +7,7 @@ Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.13
-Release:	1
+Release:	2
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
@@ -22,6 +22,8 @@ Patch4:		%{name}-from.patch
 Patch5:		%{name}-destdir.patch
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
+BuildRequires:	bison
+Requires:	textutils
 Requires:	textutils
 Requires:	words
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
