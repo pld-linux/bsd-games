@@ -2676,7 +2676,7 @@ diff -Naur bsd-games-2.10/phantasia/pathnames.h bsd-games-2.10-patched/phantasia
 + *	@(#)pathnames.h	8.2 (Berkeley) 4/2/94
 + */
 +
-+#define	_PATH_GAMEPROG	"/usr/games/phantasia"
++#define	_PATH_GAMEPROG	"/usr/bin/phantasia"
 +#define	_PATH_GOLD	"/var/games/phantasia/gold"
 +#define	_PATH_LASTDEAD	"/var/games/phantasia/lastdead"
 +#define	_PATH_MESS	"/var/games/phantasia/mess"
@@ -2990,7 +2990,7 @@ diff -Naur bsd-games-2.10/subst.sed bsd-games-2.10-patched/subst.sed
 +s%@install_prefix@%%g
 +s%@no_build_dirs@%fortune banner%g
 +s%@build_dirs@%adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dm factor fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump%g
-+s%@gamesdir@%/usr/games%g
++s%@gamesdir@%/usr/bin%g
 +s%@sbindir@%/usr/bin%g
 +s%@usrbindir@%%g
 +s%@hidegame@%:%g

@@ -2,12 +2,12 @@ Summary:	A collection of BSD (Berkeley Standard Distribution) games
 Summary(de):	Diverse BSD-Games
 Summary(es):	Paquete con varios juegos BSD
 Summary(fr):	Paquetage de jeux BSD divers
-Summary(tr):	Metin ekranda oyunlar paketi
 Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Summary(pt):	Pacote com vários jogos BSD
+Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.12
-Release:	3
+Release:	4
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://metalab.unc.edu/pub/Linux/games/%{name}-%{version}.tar.gz
@@ -21,8 +21,9 @@ BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
 Requires:	textutils
 Requires:	words
-Requires:	/usr/bin/frm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		gamesdir	%{_bindir}
 
 %description
 Bsd-games includes adventure, arithmetic, atc, backgammon, battlestar,
@@ -30,6 +31,8 @@ bcd, caesar, canfield, cfscores, countmail, cribbage, dm, factor,
 fish, gomoku, hunt, mille, monop, morse, number, phantasia, pig, pom,
 ppt, primes, quiz, rain, random, robots, rot13, sail, snake, snscore,
 teachgammon, tetris-bsd, trek, wargames, worm, worms and wump.
+
+Note: countmail requires frm(1) command from elm package.
 
 %description -l de
 Dies ist eine Sammlung von Games. Zu den bekanntesten gehören
@@ -49,6 +52,8 @@ battlestar, bcd, caesar, canfield, cfscores, countmail, cribbage, dm,
 factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia,
 pig, pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake,
 snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms i wump.
+
+Uwaga: countmail wymaga polecenia frm(1) z pakietu elm.
 
 %description -l pt
 Isto é um conjunto de jogos. Os destaques incluem gamão, jogo de
@@ -101,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 /var/games/phantasia/motd
 /var/games/phantasia/scoreboard
 /var/games/phantasia/void
-%attr(750,root,root) /var/games/sail/
+%attr(750,root,root) /var/games/sail
 /var/games/saillog
 /var/games/snake.log
 /var/games/snakerawscores
