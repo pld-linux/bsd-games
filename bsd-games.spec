@@ -7,7 +7,7 @@ Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.15
-Release:	2
+Release:	2.1
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
@@ -19,6 +19,7 @@ Patch1:		%{name}-headers.patch
 Patch2:		%{name}-ospeed.patch
 Patch3:		%{name}-config.patch
 Patch4:		%{name}-from.patch
+Patch5:		%{name}-monop_rename.patch
 BuildRequires:	bison
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
@@ -74,6 +75,7 @@ oyunlar içeren bir paket.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 
 # config patch creation: diff between unconfigured and following configuration:
 # Install prefix: $INSTALL_PREFIX
@@ -119,6 +121,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_sbindir}/huntd
 %{_datadir}/games/*
 %{_datadir}/misc/acronyms
 /var/games/atc_score
