@@ -55,7 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) /usr/games/*
 /usr/share/games/*
-/usr/share/man/man*/*.gz
 /usr/share/misc/acronyms
 /var/games/atc_score
 /var/games/battlestar.log
@@ -75,3 +74,4 @@ rm -rf $RPM_BUILD_ROOT
 /var/games/snake.log
 /var/games/snakerawscores
 /var/games/tetris-bsd.scores
+%{_mandir}/man*/*
