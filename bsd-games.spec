@@ -51,7 +51,7 @@ chmod +x install-man install-score
 %{__make} INSTALL_PREFIX="$RPM_BUILD_ROOT" install
 
 rm $RPM_BUILD_ROOT%{_bindir}/factor
-rm $RPM_BUILD_ROOT%{_mandir}/man6/factor.6
+rm $RPM_BUILD_ROOT%{_mandir}/man6/factor.6*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
