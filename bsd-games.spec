@@ -1,69 +1,77 @@
 Summary:	A collection of BSD (Berkeley Standard Distribution) games.
-Summary(de):	Diverse BSD-Games  
-Summary(fr):	paquetage de jeux BSD divers
-Summary(tr):	Metin ekranda oyunlar paketi
+Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution).
 Name:		bsd-games
-Version:	2.7
-Release:	3
+Version:	2.10
+Release:	1
 Copyright:	distributable
-Group:		Amusements/Games
+Group:		Games
+Group(pl):	Gry
 Source0:	ftp://metalab.unc.edu/pub/Linux/games/%{name}-%{version}.tar.gz
-Patch0:		bsd-games-2.7-config.patch
-Patch1:		bsd-games-2.7-hole.patch
-Patch2:		bsd-games.patch
-Patch3:		bsd-games-from.patch
+Patch0:		%{name}-hole.patch
+Patch1:		%{name}-headers.patch
+Patch2:		%{name}-from.patch
+Patch3:		%{name}-ospeed.patch
+Patch4:		%{name}-config.patch
+BuildRequires:	ncurses-devel >= 5.0
+Requires:	ncurses >= 5.0
+Requires:	textutils 
+Requires:	/usr/bin/frm
 Buildroot:	/tmp/%{name}-%{version}-root
-Requires:	textutils /usr/bin/frm
 
 %description
-Bsd-games includes adventure, arithmetic, atc, backgammon, battlestar,
-bcd, caesar, canfield, cfscores, countmail, cribbage, dm, factor,
-fish, gomoku, hangman, hunt, mille, monop, morse, number, phantasia,
-pig, pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake,
-snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms and
-wump.
+Bsd-games includes adventure, arithmetic, atc, backgammon, battlestar, bcd,
+caesar, canfield, cfscores, countmail, cribbage, dm, factor, fish, gomoku,
+hunt, mille, monop, morse, number, phantasia, pig, pom, ppt, primes, quiz,
+rain, random, robots, rot13, sail, snake, snscore, teachgammon, tetris-bsd,
+trek, wargames, worm, worms and wump.
 
-%description -l de
-Dies ist eine Sammlung von Games. Zu den bekanntesten gehören Backgammon,
-Cribbage, Monop, Primes, Trek und Battlestar.
-
-%description -l fr
-Lot de jeux. Contient backgammon, cribbage, le pendu, monop, primes, trek
-et battlestar.
-
-%description -l tr
-Tavla, cribbage, adam asmaca, monop, primes, trek ve battlestar gibi oyunlar
-içeren bir paket.
+%description -l pl
+W sk³ad gier BSD wchodz±: adventure, arithmetic, atc, backgammon,
+battlestar, bcd, caesar, canfield, cfscores, countmail, cribbage, dm,
+factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia, pig,
+pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake, snscore,
+teachgammon, tetris-bsd, trek, wargames, worm, worms i wump
 
 %prep
 %setup -q
-%patch -p1 -b .config
-%patch1 -p1 -b .hole
-%patch2 -p1 -b .tim
-%patch3 -p1 -b .from
-chmod +x install-man
-chmod +x install-score
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" 
+make LDFLAGS="-s" CFLAGS="$RPM_OPT_FLAGS" 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make RPM_BUILD_ROOT="$RPM_BUILD_ROOT" install
-
-find $RPM_BUILD_ROOT/usr/games -type f | sed "s|$RPM_BUILD_ROOT||g" |
-  sed "s|/usr/games/dm|%attr\(2755,root,games\) /usr/games/dm|" > files.list
- 
+chmod +x install-man install-score
+make INSTALL_PREFIX="$RPM_BUILD_ROOT" install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f files.list
+%files
 %defattr(644,root,root,755)
-%{_libdir}/games/*
-/var/lib/games/*
-%{_datadir}/games/*
-%{_mandir}/man5/*
-%{_mandir}/man6/*
-%{_mandir}/man8/*
-%{_sbindir}/*
+%attr(755,root,root) /usr/games/*
+/usr/share/games/*
+/usr/share/man/man*/*.gz
+/usr/share/misc/acronyms
+/var/games/atc_score
+/var/games/battlestar.log
+/var/games/cfscores
+/var/games/criblog
+/var/games/robots_roll
+%attr(640,root,root) /var/games/phantasia/characs
+/var/games/phantasia/gold
+/var/games/phantasia/lastdead
+/var/games/phantasia/mess
+/var/games/phantasia/monsters
+/var/games/phantasia/motd
+/var/games/phantasia/scoreboard
+/var/games/phantasia/void
+%attr(750,root,root) /var/games/sail/
+/var/games/saillog
+/var/games/snake.log
+/var/games/snakerawscores
+/var/games/tetris-bsd.scores
