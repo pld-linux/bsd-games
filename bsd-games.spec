@@ -7,7 +7,7 @@ Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Summary(pt):	Pacote com vários jogos BSD
 Name:		bsd-games
 Version:	2.12
-Release:	1
+Release:	2
 License:	Distributable
 Group:		Applications/Games
 Group(de):	Applikationen/Spiele
@@ -17,6 +17,7 @@ Patch0:		%{name}-hole.patch
 Patch1:		%{name}-headers.patch
 Patch2:		%{name}-ospeed.patch
 Patch3:		%{name}-config.patch
+Patch4:		%{name}-from.patch
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
 Requires:	textutils 
@@ -64,6 +65,7 @@ oyunlar içeren bir paket.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 %{__make} LDFLAGS="%{?debug:-s}" \
