@@ -49,7 +49,7 @@ W sk³ad gier BSD wchodz±: adventure, arithmetic, atc, backgammon,
 battlestar, bcd, caesar, canfield, cfscores, countmail, cribbage, dm,
 factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia,
 pig, pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake,
-snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms i wump
+snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms i wump.
 
 %description -l pt
 Isto é um conjunto de jogos. Os destaques incluem gamão, jogo de
@@ -68,7 +68,7 @@ oyunlar içeren bir paket.
 %patch4 -p1
 
 %build
-%{__make} LDFLAGS="%{?debug:-s}" \
+%{__make} LDFLAGS="%{rpmldflags}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %install
