@@ -2425,7 +2425,7 @@ diff -Nur bsd-games-2.14.orig/Makeconfig bsd-games-2.14/Makeconfig
 +# games weren't being built.
 +
 +# Source directory
-+SRCDIR := /mnt/arch/temp/BUILD/bsd-games-2.14
++SRCDIR := .
 +# Build directories
 +BUILDDIRS := adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dm fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump
 +# Installation prefix
@@ -2453,7 +2453,7 @@ diff -Nur bsd-games-2.14.orig/Makeconfig bsd-games-2.14/Makeconfig
 +INSTALL_SCRIPT := install -c -m 0755
 +INSTALL_SCORE_GAME := install -c -m 0755
 +INSTALL_DAEMON := install -c -m 0755
-+INSTALL_MANUAL := /mnt/arch/temp/BUILD/bsd-games-2.14/install-man
++INSTALL_MANUAL := ./install-man
 +INSTALL_DATA := install -c -m 0644
 +INSTALL_VARDATA := install -c -m 0644
 +INSTALL_DM := install -c -m 2755
@@ -2462,7 +2462,7 @@ diff -Nur bsd-games-2.14.orig/Makeconfig bsd-games-2.14/Makeconfig
 +# Is INSTALL_VARDATA actually needed (for games that start with non-empty
 +# scorefile?)
 +# For games which can start with empty scorefile we do:
-+INSTALL_SCORE_FILE := /mnt/arch/temp/BUILD/bsd-games-2.14/install-score
++INSTALL_SCORE_FILE := ./install-score
 +# Definitions of INSTALL_* that may have -s added
 +# This first one should no longer be needed
 +DEFS_TO_PASS := INSTALL_BINARY="$(INSTALL_BINARY)" \
@@ -2912,7 +2912,7 @@ diff -Nur bsd-games-2.14.orig/subst.sed bsd-games-2.14/subst.sed
 --- bsd-games-2.14.orig/subst.sed	1970-01-01 01:00:00.000000000 +0100
 +++ bsd-games-2.14/subst.sed	2003-07-01 20:18:45.000000000 +0200
 @@ -0,0 +1,80 @@
-+s%@srcdir@%/mnt/arch/temp/BUILD/bsd-games-2.14%g
++s%@srcdir@%.%g
 +s%@install_prefix@%$INSTALL_PREFIX%g
 +s%@no_build_dirs@%banner factor fortune hack%g
 +s%@build_dirs@%adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dm fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump%g
