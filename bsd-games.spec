@@ -6,12 +6,12 @@ Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
-Version:	2.14
-Release:	2
+Version:	2.15
+Release:	1
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
-# Source0-md5:	29042cbe4a71038f84125d020ba28546
+# Source0-md5:	3814794cb54c56ba3e82d07e93e41f00
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	53f612734e8324dfc7d3658c33dee4cb
 Patch0:		%{name}-hole.patch
