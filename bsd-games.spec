@@ -1,5 +1,5 @@
 Summary:	A collection of BSD (Berkeley Standard Distribution) games
-Summary(de):	Diverse BSD-Games  
+Summary(de):	Diverse BSD-Games
 Summary(es):	Paquete con varios juegos BSD
 Summary(fr):	Paquetage de jeux BSD divers
 Summary(tr):	Metin ekranda oyunlar paketi
@@ -18,7 +18,7 @@ Patch3:		%{name}-config.patch
 Patch4:		%{name}-from.patch
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
-Requires:	textutils 
+Requires:	textutils
 Requires:	words
 Requires:	/usr/bin/frm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
