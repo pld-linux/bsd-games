@@ -13,8 +13,10 @@ Patch2:		%{name}-from.patch
 Patch3:		%{name}-ospeed.patch
 Patch4:		%{name}-config.patch
 BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	words
 Requires:	ncurses >= 5.0
 Requires:	textutils 
+Requires:	words
 Requires:	/usr/bin/frm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,7 +43,7 @@ teachgammon, tetris-bsd, trek, wargames, worm, worms i wump
 %patch4 -p1
 
 %build
-make LDFLAGS="-s" CFLAGS="$RPM_OPT_FLAGS" 
+make LDFLAGS="-s" CFLAGS="$RPM_OPT_FLAGS" SRCDIR=$RPM_BUILD_DIR
 
 %install
 rm -rf $RPM_BUILD_ROOT
