@@ -24,7 +24,6 @@ BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
 BuildRequires:	bison
 Requires:	textutils
-Requires:	textutils
 Requires:	words
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
