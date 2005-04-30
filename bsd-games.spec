@@ -21,6 +21,7 @@ Patch3:		%{name}-config.patch
 Patch4:		%{name}-from.patch
 Patch5:		%{name}-monop_rename.patch
 Patch6:		%{name}-man.patch
+Patch7:		%{name}-types.patch
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	groff
@@ -98,6 +99,7 @@ chmod +x install-man install-score
 %patch4 -p1
 %patch5 -p1
 %patch6 -p1
+%patch7 -p1
 
 %build
 %{__make} \
