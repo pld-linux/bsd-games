@@ -2428,7 +2428,7 @@ diff -Nur bsd-games-2.16.orig/Makeconfig bsd-games-2.16/Makeconfig
 +# games weren't being built.
 +
 +# Source directory
-+SRCDIR := /home/comp/rpm/BUILD/bsd-games-2.16
++SRCDIR := .
 +# Build directories
 +BUILDDIRS := adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dab dm fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump
 +# Installation prefix
@@ -2902,7 +2902,7 @@ diff -Nur bsd-games-2.16.orig/subst.sed bsd-games-2.16/subst.sed
 --- bsd-games-2.16.orig/subst.sed	1970-01-01 01:00:00.000000000 +0100
 +++ bsd-games-2.16/subst.sed	2005-04-30 13:38:40.893722192 +0200
 @@ -0,0 +1,85 @@
-+s%@srcdir@%/home/comp/rpm/BUILD/bsd-games-2.16%g
++s%@srcdir@%.%g
 +s%@install_prefix@%$INSTALL_PREFIX%g
 +s%@no_build_dirs@%banner factor fortune hack%g
 +s%@build_dirs@%adventure arithmetic atc backgammon battlestar bcd boggle caesar canfield countmail cribbage dab dm fish gomoku hangman hunt mille monop morse number phantasia pig pom ppt primes quiz rain random robots sail snake tetris trek wargames worm worms wtf wump%g
