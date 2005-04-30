@@ -6,12 +6,12 @@ Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
 Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
-Version:	2.15
-Release:	3
+Version:	2.16
+Release:	1
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
-# Source0-md5:	3814794cb54c56ba3e82d07e93e41f00
+# Source0-md5:	95bb83ebda02ff1fc8f4bf22a31d1ef0
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	5ed0ae6b7c5d5a2edddc636240314e34
 Patch0:		%{name}-hole.patch
@@ -54,7 +54,6 @@ snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms and wump.
 
 Aviso: countmail requiere comando frm(1) del paquete elm.
 
-
 %description -l fr
 Lot de jeux. Contient backgammon, cribbage, le pendu, monop, primes,
 trek et battlestar.
@@ -81,26 +80,29 @@ oyunlar içeren bir paket.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
-
 # config patch creation: diff between unconfigured and following configuration:
 # Install prefix: $INSTALL_PREFIX
 # Games not to build: banner factor fortune hack
 # Games directory: /usr/bin
 # Daemon directory: /usr/sbin
+# Directory for miscellaneous documentation [/usr/share/doc/bsd-games]: /usr/share/doc/bsd-games-%{version}
 # Set owners/groups on installed files [y]: n
 # Gzip manpages [y]: n
 # Ncurses includes []: -I/usr/include/ncurses
 # (the rest is default)
 
 # then change $RPM_BUILD_DIR path to "."
-
+%patch3 -p1
+# these files come from patch
+chmod +x install-man install-score
 %patch4 -p1
 %patch5 -p1
 %patch6 -p1
 
 %build
 %{__make} \
+	CC="%{__cc}" \
+	CXX="%{__cxx}" \
 	LDFLAGS="%{rpmldflags}" \
 	OPTIMIZE="%{rpmcflags}"
 
@@ -110,7 +112,6 @@ nroff trek/DOC/trekmanual.nr > doc/trek/trekmanual.txt
 
 %install
 rm -rf $RPM_BUILD_ROOT
-chmod +x install-man install-score
 
 %{__make} install \
 	INSTALL_PREFIX=$RPM_BUILD_ROOT
@@ -134,11 +135,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/trek
+%doc doc/trek trek/USD.doc/trek.me
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/huntd
 %{_datadir}/games/*
 %{_datadir}/misc/acronyms
+%{_datadir}/misc/acronyms.comp
 /var/games/atc_score
 /var/games/battlestar.log
 /var/games/cfscores
