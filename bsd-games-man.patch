@@ -104,14 +104,3 @@
  .Xr sendmail 8
  .Sh AUTHORS
  Conrad Huang, Ken Arnold, and Greg Couch;
---- bsd-games-2.15/trek/trek.6~	2004-09-28 23:29:58.000000000 +0200
-+++ bsd-games-2.15/trek/trek.6	2004-09-28 23:29:58.000000000 +0200
-@@ -78,7 +78,7 @@
- .Sh AUTHOR
- .An Eric Allman
- .Sh SEE ALSO
--.Pa /usr/share/doc/usd/31.trek
-+.Pa /usr/share/doc/bsd-games-2.15/trek/trekmanual.txt
- .Sh COMMAND SUMMARY
- .Bl -item -compact
- .It
