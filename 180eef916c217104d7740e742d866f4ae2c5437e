@@ -1,0 +1,4 @@
+- updated to 2.12,
+- spec adapterized and now also %{debug} ready,
+- use rpm new automation suit,
+- merge es, de, fr, pt, tr translations from Conectiva.
