@@ -7,7 +7,7 @@ Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.16
-Release:	2
+Release:	3
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
@@ -148,6 +148,7 @@ rm -rf $RPM_BUILD_ROOT
 /var/games/cfscores
 /var/games/criblog
 /var/games/robots_roll
+%dir /var/games/phantasia
 %attr(640,root,games) /var/games/phantasia/characs
 /var/games/phantasia/gold
 /var/games/phantasia/lastdead
