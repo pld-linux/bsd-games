@@ -1,3 +1,6 @@
+# TODO
+# - update to 2.17
+# - apply debian patches? ftp://ftp.debian.org/debian/pool/main/b/bsdgames/bsdgames_2.17-5.diff.gz
 Summary:	A collection of BSD (Berkeley Standard Distribution) games
 Summary(de):	Diverse BSD-Games
 Summary(es):	Paquete con varios juegos BSD
@@ -7,7 +10,7 @@ Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.16
-Release:	3
+Release:	3.1
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
@@ -22,6 +25,7 @@ Patch4:		%{name}-from.patch
 Patch5:		%{name}-monop_rename.patch
 Patch6:		%{name}-man.patch
 Patch7:		%{name}-types.patch
+Patch8:		%{name}-tetris.patch
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	groff
@@ -32,6 +36,7 @@ Requires:	words
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		gamesdir	%{_bindir}
+%undefine	with_ccache
 
 %description
 Bsd-games includes adventure, arithmetic, atc, backgammon, battlestar,
@@ -51,7 +56,8 @@ Bsd-games incluye juegos: adventure, arithmetic, atc, backgammon,
 battlestar, bcd, caesar, canfield, cfscores, countmail, cribbage, dm,
 factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia,
 pig, pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake,
-snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms and wump.
+snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms and
+wump.
 
 Aviso: countmail requiere comando frm(1) del paquete elm.
 
@@ -100,6 +106,7 @@ chmod +x install-man install-score
 %patch5 -p1
 %patch6 -p1
 %patch7 -p1
+%patch8 -p1
 
 %build
 %{__make} \
@@ -131,6 +138,8 @@ install factor/factor.6 $RPM_BUILD_ROOT%{_mandir}/man6/primes.6
 # resolve conflict with hunt package
 mv -f $RPM_BUILD_ROOT%{_bindir}/hunt{,-game}
 mv -f $RPM_BUILD_ROOT%{_mandir}/man6/hunt{,-game}.6
+
+rm -f $RPM_BUILD_ROOT%{_mandir}/{README.bsd-games-non-english-man-pages,bsd-games-pld.patch}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
