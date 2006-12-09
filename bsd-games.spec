@@ -1,5 +1,4 @@
 # TODO
-# - update to 2.17
 # - apply debian patches? ftp://ftp.debian.org/debian/pool/main/b/bsdgames/bsdgames_2.17-5.diff.gz
 Summary:	A collection of BSD (Berkeley Standard Distribution) games
 Summary(de):	Diverse BSD-Games
@@ -20,15 +19,16 @@ Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 Patch0:		%{name}-hole.patch
 Patch1:		%{name}-headers.patch
 Patch2:		%{name}-ospeed.patch
-Patch3:		%{name}-config.patch
-Patch4:		%{name}-from.patch
-Patch5:		%{name}-monop_rename.patch
-Patch6:		%{name}-man.patch
-Patch7:		%{name}-types.patch
-Patch8:		%{name}-tetris.patch
+Patch3:		%{name}-from.patch
+Patch4:		%{name}-monop_rename.patch
+Patch5:		%{name}-man.patch
+Patch6:		%{name}-types.patch
+Patch7:		%{name}-tetris.patch
+Patch8:		%{name}-debian.patch
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	groff
+BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	words
 Requires:	textutils
@@ -87,28 +87,28 @@ oyunlar içeren bir paket.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-# config patch creation: diff between unconfigured and following configuration:
-# Install prefix: $INSTALL_PREFIX
-# Games not to build: banner factor fortune hack
-# Games directory: /usr/bin
-# Daemon directory: /usr/sbin
-# Directory for miscellaneous documentation [/usr/share/doc/bsd-games]: /usr/share/doc/bsd-games-%{version}
-# Set owners/groups on installed files [y]: n
-# Gzip manpages [y]: n
-# Ncurses includes []: -I/usr/include/ncurses
-# (the rest is default)
-
-# then change $RPM_BUILD_DIR path to "."
 %patch3 -p1
-# these files come from patch
-chmod +x install-man install-score
 %patch4 -p1
 %patch5 -p1
 %patch6 -p1
 %patch7 -p1
 %patch8 -p1
 
+cat >config.params <<EOF
+bsd_games_cfg_non_interactive=y
+bsd_games_cfg_install_prefix=$RPM_BUILD_ROOT
+bsd_games_cfg_no_build_dirs="banner factor fortune hack"
+bsd_games_cfg_gamesdir=%{_bindir}
+bsd_games_cfg_sbindir=%{_sbindir}
+bsd_games_cfg_docdir=%{_docdir}/bsdgames-%{version}
+bsd_games_cfg_do_chown=n
+bsd_games_cfg_gzip_manpages=n
+bsd_games_cfg_ncurses_includes=-I/usr/include/ncurses
+bsd_games_cfg_ncurses_lib="-lncurses -ltinfo"
+EOF
+
 %build
+./configure
 %{__make} \
 	CC="%{__cc}" \
 	CXX="%{__cxx}" \
@@ -122,8 +122,7 @@ nroff trek/DOC/trekmanual.nr > doc/trek/trekmanual.txt
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	INSTALL_PREFIX=$RPM_BUILD_ROOT
+%{__make} install
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
