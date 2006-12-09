@@ -1,0 +1,2 @@
+- GLSA 200603-26 patch fix (maybe gentoo specific, but patch applies)
+[fixes CVE-2006-1539]
