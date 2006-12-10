@@ -1,5 +1,3 @@
-# TODO
-# - apply debian patches? ftp://ftp.debian.org/debian/pool/main/b/bsdgames/bsdgames_2.17-5.diff.gz
 Summary:	A collection of BSD (Berkeley Standard Distribution) games
 Summary(de):	Diverse BSD-Games
 Summary(es):	Paquete con varios juegos BSD
@@ -9,7 +7,7 @@ Summary(pt):	Pacote com vários jogos BSD
 Summary(tr):	Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.17
-Release:	0.1
+Release:	0.2
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://ibiblio.org/pub/Linux/games/%{name}-%{version}.tar.gz
