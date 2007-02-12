@@ -1,10 +1,10 @@
 Summary:	A collection of BSD (Berkeley Standard Distribution) games
-Summary(de.UTF-8):   Diverse BSD-Games
-Summary(es.UTF-8):   Paquete con varios juegos BSD
-Summary(fr.UTF-8):   Paquetage de jeux BSD divers
-Summary(pl.UTF-8):   Zestaw gier BSD (Berkeley Standard Distribution)
-Summary(pt.UTF-8):   Pacote com vários jogos BSD
-Summary(tr.UTF-8):   Metin ekranda oyunlar paketi
+Summary(de.UTF-8):	Diverse BSD-Games
+Summary(es.UTF-8):	Paquete con varios juegos BSD
+Summary(fr.UTF-8):	Paquetage de jeux BSD divers
+Summary(pl.UTF-8):	Zestaw gier BSD (Berkeley Standard Distribution)
+Summary(pt.UTF-8):	Pacote com vários jogos BSD
+Summary(tr.UTF-8):	Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.17
 Release:	0.2
