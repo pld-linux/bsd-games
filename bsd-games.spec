@@ -1,10 +1,10 @@
 Summary:	A collection of BSD (Berkeley Standard Distribution) games
-Summary(de):	Diverse BSD-Games
-Summary(es):	Paquete con varios juegos BSD
-Summary(fr):	Paquetage de jeux BSD divers
-Summary(pl):	Zestaw gier BSD (Berkeley Standard Distribution)
-Summary(pt):	Pacote com v·rios jogos BSD
-Summary(tr):	Metin ekranda oyunlar paketi
+Summary(de.UTF-8):   Diverse BSD-Games
+Summary(es.UTF-8):   Paquete con varios juegos BSD
+Summary(fr.UTF-8):   Paquetage de jeux BSD divers
+Summary(pl.UTF-8):   Zestaw gier BSD (Berkeley Standard Distribution)
+Summary(pt.UTF-8):   Pacote com v√°rios jogos BSD
+Summary(tr.UTF-8):   Metin ekranda oyunlar paketi
 Name:		bsd-games
 Version:	2.17
 Release:	0.2
@@ -45,11 +45,11 @@ teachgammon, tetris-bsd, trek, wargames, worm, worms and wump.
 
 Note: countmail requires frm(1) command from elm package.
 
-%description -l de
-Dies ist eine Sammlung von Games. Zu den bekanntesten gehˆren
+%description -l de.UTF-8
+Dies ist eine Sammlung von Games. Zu den bekanntesten geh√∂ren
 Backgammon, Cribbage, Monop, Primes, Trek und Battlestar.
 
-%description -l es
+%description -l es.UTF-8
 Bsd-games incluye juegos: adventure, arithmetic, atc, backgammon,
 battlestar, bcd, caesar, canfield, cfscores, countmail, cribbage, dm,
 factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia,
@@ -59,12 +59,12 @@ wump.
 
 Aviso: countmail requiere comando frm(1) del paquete elm.
 
-%description -l fr
+%description -l fr.UTF-8
 Lot de jeux. Contient backgammon, cribbage, le pendu, monop, primes,
 trek et battlestar.
 
-%description -l pl
-W sk≥ad gier BSD wchodz±: adventure, arithmetic, atc, backgammon,
+%description -l pl.UTF-8
+W sk≈Çad gier BSD wchodzƒÖ: adventure, arithmetic, atc, backgammon,
 battlestar, bcd, caesar, canfield, cfscores, countmail, cribbage, dm,
 factor, fish, gomoku, hunt, mille, monop, morse, number, phantasia,
 pig, pom, ppt, primes, quiz, rain, random, robots, rot13, sail, snake,
@@ -72,13 +72,13 @@ snscore, teachgammon, tetris-bsd, trek, wargames, worm, worms i wump.
 
 Uwaga: countmail wymaga polecenia frm(1) z pakietu elm.
 
-%description -l pt
-Isto È um conjunto de jogos. Os destaques incluem gam„o, jogo de
-cartas, forca, monopÛlio e guerra nas estrelas.
+%description -l pt.UTF-8
+Isto √© um conjunto de jogos. Os destaques incluem gam√£o, jogo de
+cartas, forca, monop√≥lio e guerra nas estrelas.
 
-%description -l tr
+%description -l tr.UTF-8
 Tavla, cribbage, adam asmaca, monop, primes, trek ve battlestar gibi
-oyunlar iÁeren bir paket.
+oyunlar i√ßeren bir paket.
 
 %prep
 %setup -q
