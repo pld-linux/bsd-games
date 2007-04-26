@@ -1,0 +1,5 @@
+- dropped config patch, use configure in non-interactive mode instead
+- updated monop_rename patch
+- added debian patch with various fixes from debian patch (2.17-8), including
+  some overfow fixes [fixes CVE-2006-1744]
+- builds now
